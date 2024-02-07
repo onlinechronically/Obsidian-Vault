@@ -1,0 +1,13 @@
+- Natural Number
+	- $\mathbb{N} = \{ 0, 1, 2, 3, 4, ... \}$
+- Integers
+	- $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2 \} = \{ n \mid n \in \mathbb{N} \lor -n \in \mathbb{N} \}$
+- Rational Numbers
+	- Numbers that can be written as a ratio of integers
+	- $\mathbb{Q} = \{ \frac{p}{q} \mid p \in \mathbb{Z} \land q \in \mathbb{Z} \land q \neq 0 \}$
+- Real Numbers
+	- $\mathbb{R} =$ every # on the number line
+	- $\mathbb{R} =$ every # with a decimal expansion
+	- $\mathbb{R} =$ (finite, infinite, pattern, no pattern)
+- Complex Numbers ($\mathbb{C}$)
+- 

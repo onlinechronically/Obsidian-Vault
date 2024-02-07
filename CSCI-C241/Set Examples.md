@@ -1,0 +1,60 @@
+- Example #1 (07/02/2024)
+	- $G = \{x \mid x \in \mathbb{N} \land x \leq 7\}$
+	- $\mid G \mid = 8$
+- Example #2 (07/02/2024)
+	- $S = \{\{1,2\},\{2,3\},\{3,4\}\}$
+	- $3 \notin S$
+	- $\mid S \mid = 3$
+	- $\{1,2\} \in S$
+	- $\varnothing \notin S$
+	- $\{1,2\} \nsubseteq S$
+		- $1 \in \{1,2\}$
+		- $1 \nsubseteq S$
+	- $\{\{1,2\},\{3,4\}\} \subseteq S$
+		- $\{\{1,2\}\} \subseteq S$
+	- $\{\{1\}\} \nsubseteq S$
+		- $\{1\} \in \{\{1\}\}$
+		- $\{1\} \notin S$
+	- $1 \in \{1,2\} \in S$
+		- Confusing
+		- Better to do:
+			- $1 \in \{1,2\}$
+			- $\{1,2\} \in S$
+- Example #3 (07/02/2024) - empty set
+	- $T = \{\varnothing, \{1\}, \{1,2\}, \{1,2,3\}\}$
+	- $\varnothing \in T$
+- Example #4 (07/02/2024)
+	- $C = \{1,2,3,4,5\}$
+	- $C \subseteq G$
+		- This is because all the members in C are also members of G
+	- $\{1,4,9,16\} \nsubseteq G$
+		- $9 \in \{1,4,9,16\}$, but $9 \notin G$
+- Example #5 (07/02/2024)
+	- $E = \{2n \mid n \in \mathbb{N}\}$
+		- $E = \{2,4,6\}$
+		- $E \subseteq E$
+	- $\{6,12,24\} \subseteq E$
+	- $\{4n \mid n \in \mathbb{N}\} \subseteq E$
+		- Yes, any multiple of 4 is even.
+	- $10 \nsubseteq E$
+		- 10 is not a set
+	- $\{10\} \subseteq E$
+		- Singleton Set
+	- $\varnothing \subseteq E$
+		- Yes, this is a Trivial Universal Claim, technically true (but only trivially)
+	- 
+- Example #6 (07/02/2024) - Powerset
+	- $E = \{2n \mid n \in \mathbb{N}\}$
+	- What are members of $\mathcal{P} (E)$
+		- $\{2,4,6\} \in \mathcal{P} (E)$
+			- because $\{2,4,6\} \subseteq E$
+		- $\{4n \mid n \in \mathbb{N}\} \in \mathcal{P} (E)$
+			- $E \in \mathcal{P} (E)$
+			- $\varnothing \in \mathcal{P} (E)$
+- Example #7 (07/02/2024)
+	- $D = \{a,b,c\}$
+	- $\mathcal{P} (D) = \{\varnothing, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}\}$
+- Example #8 (07/02/2024)
+	- $\{2,4,6\}$ is a subset of $B$
+	- $B$ is a superset of $\{2,4,6\}$
+- 

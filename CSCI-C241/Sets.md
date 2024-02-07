@@ -1,0 +1,69 @@
+- Group/Collection
+- No order
+- No duplicates
+- Subsets
+	- Partitions?
+- Sets of:
+	- Formulas
+	- Vectors
+	- Numbers
+- Data Type (Programming)
+- Set Operations
+	- Union
+	- Intersection
+	- Complement
+- Functions
+- Venn Diagrams
+- Set Notation
+	- { 1, 2, 3 }
+	- Universal Set
+	- Empty Set
+- The only thing that matters about a set is which things are members/elements of the set.
+- $x \in A$ means "x is a member of A"
+- **Ways of Defining Sets**
+	- Set-list notation
+		- { 1, 2, 3 } = { 2, 3, 1 } = { 2, 1, 3, 1, 2 }
+		- { "foo", "bar", "baz" }
+		- { 0, 2, 4, 6, 8, ... }
+	- Set-builder notation
+		- $\{p + 1 \mid \text{ p is a prime number}\}$
+		- $E = \{n \mid n \text{ is an even nat. number}\}$
+		- $\{c \mid c \text{ is a valid python command}\}$
+		- $\{x \mid x \ge 5\}$
+		- English: E is the set of all even nat. nums
+- Set Operations
+	- Union ($A \cup B$)
+		- $\{x \mid x \in A \lor x \in B\}$
+	- Intersection ($A \cap B$)
+		- $\{x \mid x \in A \land x \in B\}$
+	- Complement ($\overline A$)
+		- $\{x \mid x \notin A\}$
+- The universal set
+	- The set of all the things we are talking about right now
+	- Being a member of the universal set is implied every time we use set-builder notation
+- Relative Complement/Set Subtraction
+	- $A \setminus B = A - B = \{ x \mid x \in A \land x \notin B \}$
+- Empty set
+	- The set with no members is called the empty set
+	- $\{\}$
+	- $\varnothing$
+- Cardinality
+	- The size of a set
+	- The cardinality of a finite set is just the # of members
+	- | A | = the cardinality of A
+	- |$\{1,2,3\}$| = 3
+	- |$\mathbb{Z}$| is infinite
+- Subsets
+	- Def: A set A is a subset of a set B if and only if every member of A is also a member of B
+	- We write $A \subseteq B$ (\\subseteq) to mean "A is a subset of B"
+	- A is a proper (or strict) subset of B if and only if A is a subset of B and $A \neq B$
+	- We write $A \subsetneq B$ (\\subsetneq) to mean "A is a proper subset of B"
+- Powersets
+	- The powerset of A is the set whose members are the subsets of A
+	- We write $\mathcal{P} (A)$ to mean "the powerset of A"
+	- Thm: For a finite set A
+		- $\mid \mathcal{P} (A) \mid = 2^{\mid A \mid}$
+- Supersets
+	- If A is a subset of B, then B is a superset of A
+		- We write $B \supseteq A$ to mean "B is a superset of A"
+- 

@@ -1,0 +1,81 @@
+- **Direct Proof**
+	- This is the method of assuming some set of premises and using them to prove other statements, eventually leading to some sort of conclusion.
+	- You can use direct proof to show an argument is valid.
+- **Rules for Natural Deduction** - A specific set of eight rules (two for each connective):
+	- $\land$, $\lor$, $\neg$, $\rightarrow$
+	- Introduction Rules:
+		- How to prove formula with a particular main connective
+	- Elimination Rules:
+		- How to use a formula with a particular main connective
+	- Elimination ($\land$) (Simplification)
+		- If you know a formula of the form $P \land Q$, then you can conclude $P$ and you can conclude $Q$
+	- Introduction ($\land$) (Conjunction)
+		- If you know P and you know Q, then you can conclude $P \land Q$
+	- Elimination ($\neg$) (Double Negation)
+		- If you know $\neg \neg P$, then you can conclude $P$
+	- Elimination ($\rightarrow$) (Application)
+		- If you know $P \rightarrow Q$ and you know $P$, you can conclude $Q$
+- **Writing Proof**
+	- Pf: Assume $\neg \neg A \land D$ and $A \rightarrow (B \land C)$
+	- Since we know $\neg \neg A \land D$, we can conclude $\neg \neg A$ and $D$
+	- From $\neg \neg A$, we get $A$ (double negative)
+	- Because $A$ is true, we can apply $A \rightarrow (B \land C)$ to get $B \land C$ (application)
+	- $B \land C$ implies $B$ and $C$ ($\land$ - Elimination)
+	- $C$ and $D$ together imply $C \land D$ ($\land$ - Introduction)
+- **Guidelines for Semi-formal Proofs**
+	- Only use the rules from this class, the 8 Natural Deduction rules.
+	- One rule per step.
+	- Cite the rule name.
+	- Say which formula's you are using.
+	- Clearly indicate all assumptions.
+- $\vdash$
+	- p1,p2,p3,pn $\vdash$ c
+	- There is a (direct) proof with assumptions p1,p2,p3,pn
+	- is valid iff premises $\vdash$ c
+- **Proof Rules**
+	- $\land - Elim$
+		- $P \land Q \vdash P$
+		- $P \land Q \vdash Q$
+	- $\land - Introduction$
+		- $P, Q \vdash P \land Q$
+	- $\lor - Introduction$ (Weakening)
+		- If you know $P$, then you can conclude $P \lor Q$ or $Q \lor P$
+	- $\lor - Elimination$ (Proof By Cases)
+		- If you know $P \lor Q$, and you have 2 subproofs:
+			- One assuming $P$ and proving $R$
+			- One assuming $Q$ and proving $R$
+		- Then you can conclude $R$ (outside the subproofs)
+	- Double Negative
+		- $\neg \neg P \vdash P$
+	- $Introduction$ ($\neg$) (Proof by Contradiction)
+		- Given a subproof assuming $P$, and proving $R$ and $\neg R$, we can conclude (outside the subproof) $\neg P$
+	- $Application$ ($\rightarrow$)
+		- $P \rightarrow Q$, $P \vdash Q$
+	- $Introduction$ ($\rightarrow$) (Direct Proof)
+		- If you have a subproof that starts with assuming $P$ and ends by proving $Q$, then you can conclude $P \rightarrow Q$ (outside of the subproof).
+		- Given a subproof assuming $P$ and proving $Q$, conclude $P \rightarrow Q$
+- **Reasons to start a Subproof**
+	- If you want to prove an implication
+		- (Start assuming the premise of the desired arrow formula)
+		- (Set your subgoal to be the conclusion)
+	- If you already know an or statement
+		- (Start 2 cases, one assuming each part of the or formula)
+		- (Try to prove the same thing in both of those cases)
+- When should you start a subproof:
+	- You want to prove a formula of the form $P \rightarrow Q$ (Assume $P$ and set $Q$ as your symbol)
+	- You already know a formula of the form $P \lor Q$ (2 subproofs, one assuming $P$ and the other assuming $Q$, try to prove the same thing in both)
+	- You want to prove a formula of the form $\neg P$ (Assume $P$, and try to prove a contradiction)
+
+- Note: Any universal claim about all the things in a category that has nothing in it is technically a true claim. **We call these trivial claims.**
+- So...Any argument with inconsistent premises is (trivially) valid.
+- **The principle of Explosion:** something is not true if you can use it to prove absolutely anything.
+- $\vdash P \lor \neg P$ - Law of Excluded Middle (need to use $\neg \neg P$)
+
+- **Informal Proofs**
+	- Proving an Existential Claim
+		- Give an example (and show that the example works)
+	- Proving a Universal Claim
+		- "Choose" a generic example and prove that it works
+			- "Choose a member" of A,
+			- "and try to prove it is a member of B"
+			- to prove $A \subseteq B$

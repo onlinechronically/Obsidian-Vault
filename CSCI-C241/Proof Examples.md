@@ -1,0 +1,163 @@
+- Example:
+	- Goal: C
+	- Want: $A \land B$, so I can apply with $(A \lor B) \rightarrow C$
+	- Claim: $(A \lor B) \rightarrow C, A \vdash C$
+	- Pf: Assume $(A \lor B) \rightarrow C$ and $A$
+		- Since A is true, $A \lor B$ is also true (weakening)
+		- Because $A \lor B$ and $(A \lor B) \rightarrow C$, we know $C$ (application)
+- Example 2:
+	- Claim: $(A \land B) \rightarrow C, A \vdash (B \land D) \rightarrow (C \land A)$
+	- Goal: $(B \land D) \rightarrow (C \land A)$
+	- Want: 
+		- $A \land B$ to do application
+		- $A \land B$ to do introduction ($\land$)
+	- Pf: Assume $(A \land B) \rightarrow C$ and $A$
+		- Assume $B \land D$
+		- $B \land D$ yields B and D. ($\land - Elimination$)
+		- Because A and B hold, we know $A \land B$ ($\land - Introduction$)
+		- $A \land B$ is true, so we can apply $(A \land B) \rightarrow C$ to get $C$ (application)
+		- From $C$ and $A$, we get $C \land A$ ($\land - Introduction$)
+	- Under the assumption $B \land D$, we proved $C \land A$, so therefore $(B \land D) \rightarrow (C \land A)$ (subproof)
+- Challenge #1 (24/01/2024):
+	- Claim: $(P \lor T) \rightarrow \neg \neg R, Q \rightarrow (S \land P) \vdash (P \land Q) \rightarrow (R \land S)$
+	- Goal: $(P \land Q) \rightarrow (R \land S)$
+	- Want:
+		- $Q$ (for application)
+		- $P \lor T$ (for application)
+		- $P \land Q$ ()
+	- Pf: Assume $(P \lor T) \rightarrow \neg \neg R$ and $Q \rightarrow (S \land P)$
+		- Sub-Proof
+			- Assume $P \land Q$ $//$ assuming part of goal would be a good start
+			- Since $P \land Q$, $P$ and $Q$ ($\land - Elimination$)
+			- Since $Q$, we can apply $Q \rightarrow (S \land P)$ and conclude $S \land P$ ($\rightarrow - Application$)
+			- Since $P$, $P \lor T$ ($\lor - Weakening$)
+			- Since $P \lor T$, we can apply $(P \lor T) \rightarrow \neg \neg R$ and conclude $\neg \neg R$ ($\rightarrow - Application$)
+			- Because $\neg \neg R$, we know $R$ (Double Negation)
+			- Since $Q$ we can apply $Q \rightarrow (S \land P)$ and conclude $S$ ($\land - Elimination$)
+			- Since $S$ and $R$, we can conclude $R \land S$ ($\land - Introduction$)
+		- Under the assumption $P \land Q$, we proved $R \land S$, so therefore $(P \land Q) \rightarrow (R \land S)$ ($Direct\ Proof$)
+- Challenge #2 (24/01/2024):
+	- Claim: $(X \land Y) \rightarrow \neg \neg Z, \neg W \vdash X \rightarrow (Z \land \neg W)$
+	- Goal: $X \rightarrow (Z \land \neg W)$
+	- Subgoal: $Z \land \neg W$
+	- Want:
+		- $X \land Y$ (application)
+	- Pf: Assume $(X \land Y) \rightarrow \neg \neg Z$ and $\neg W$ $-$ Not a valid claim, you want to try to get stuck
+		- Sub-Proof
+			- Assume $X$
+			- Since we know $X$, we can apply ???
+			- Since we know $Z \land \neg W$, we can conclude $Z$
+		- Maybe this is invalid? (Prove with a truth assignment)
+			- Counter Example?
+				- W = F
+				- X = T
+				- Y = F
+				- Z = F
+			- $(X \land Y) \rightarrow \neg \neg Z, \neg W \vdash X \rightarrow (Z \land \neg W)$
+			- $F \rightarrow F, T, \vdash T \rightarrow F$
+			- $T, T, \vdash F$
+- Challenge #4 (24/01/2024):
+	- Claim: $(P \rightarrow Q) \lor \neg \neg Q, P \land R \vdash Q \land R$
+	- Goals:
+		- $Q \land R$
+	- Pf: Assume $(P \rightarrow Q) \lor \neg \neg Q, P \land R$
+		- From $P \land R$, we can assume $P$ and $R$ ($\land - Intro$)
+			- Case 1 $(P \rightarrow Q)$
+				- We can apply $P \rightarrow Q$ and conclude $Q$ ($Application$)
+			- Case 2 $(\neg \neg Q)$
+				- $\neg \neg Q$ implies $Q$ ($Double\ Negative$)
+		- In either case of $(P \rightarrow Q) \lor \neg \neg Q, P \land R$, $Q$ is true, so $Q$ is true in general. ($Proof\ By\ Cases$)
+		- From $R$ and $Q$, we get $Q \land R$ ($\land - Intro$)
+		- 
+	- Under the assumption $P \land R$ we can proved $Q \land R$, so therefore
+- Example #1 (29/01/2024)
+	- Claim: $(Z \rightarrow W) \lor \neg Y, W \rightarrow Z \vdash W \rightarrow (X \lor \neg Y)$
+	- Goal: $W \rightarrow (X \lor \neg Y)$
+		- Subgoal: $X \lor \neg Y$
+	- 
+	- Pf: Assume $(Z \rightarrow W) \lor \neg Y, W \rightarrow Z$
+		- Assume $W$
+		- Since $W$, we can apply $W \rightarrow Z$, to get $Z$ (application)
+			- Case 1: $Z \rightarrow W$
+				- 
+			- Case 2: $\neg Y$
+				- 
+	- Counterexample
+		- W = True
+		- X = False
+		- Y = True
+		- Z = True
+	- $(Z \rightarrow W) \lor \neg Y, W \rightarrow Z \vdash W \rightarrow (X \lor \neg Y)$
+	- $(T \rightarrow T) \lor \neg T, T \rightarrow T \vdash T \rightarrow (F \lor \neg T)$
+	- $T \lor F, T \vdash T \rightarrow (F)$
+	- $T, T \vdash F$
+- Example #2 (29/01/2024) - good example for proof by cases
+	- Claim: $(Z \rightarrow X) \lor \neg Y, W \rightarrow Z \vdash W \rightarrow (X \lor \neg Y)$
+	- Goal: $W \rightarrow (X \lor \neg Y)$
+		- Subgoal: $X \lor \neg Y$
+	- 
+	- Pf: Assume $(Z \rightarrow X) \lor \neg Y, W \rightarrow Z$
+		- Assume $W$
+		- Since $W$, we can apply $W \rightarrow Z$, to get $Z$ (application)
+			- Case 1: $Z \rightarrow X$
+				- Since $Z \rightarrow X$ and $Z$, we get $X$ (application)
+				- From $X$, we know $X \lor \neg Y$ (weakening)
+			- Case 2: $\neg Y$
+				- From $\neg Y$, we know $(X \lor \neg Y)$ (weakening)
+		- In either case of $(Z \rightarrow X) \lor \neg Y$, we proved $X \lor \neg Y$, so $X \lor \neg Y$ is true in general. (Proof by Cases)
+	- Under the assumption of $W$, we proved $X \lor \neg Y$, therefore $W \rightarrow (X \lor \neg Y)$ (direct proof)
+- Example #3 (29/01/2024) - good example for proof by contradiction
+	- Claim: $A \land \neg B \vdash \neg (A \rightarrow B)$
+	- Goal: $\neg (A \rightarrow B)$
+	- Pf: Assume $A \land \neg B$
+		- Since we have $A \land \neg B$, we can conclude $A$ and $\neg B$ (Elimination)
+			- Suppose $A \rightarrow B$ (will prove a contradiction)
+			- Applying $A \rightarrow B$ and $A$, gives us $B$ (Application)
+				- Comment: But this is impossible, as we have already proved $\neg B$
+		- Assuming $A \rightarrow B$, we proved an impossibility, so therefore $\neg (A \rightarrow B)$. (proof by contradiction)
+- Example #4 (29/01/2024) - nested subproofs:
+	- Claim: $A \rightarrow B \vdash \neg B \rightarrow \neg A$
+	- Goal: $\neg B \rightarrow \neg A$
+	- Pf: Assume $A \rightarrow B$
+		- Subproof:
+			- Assume $\neg B$
+			- Suppose towards a contradiction that $A$
+				- Since we have $A$ and $A \rightarrow B$, we can conclude $B$. (application)
+		- From $A$, we proved $B$, contradicting our earlier assumption $\neg B$, hence $\neg A$ (contr.)
+	- Under the assumption $\neg B$, we proved $\neg A$, therefore $\neg B \rightarrow \neg A$ (direct proof)
+- Example #5 (29/01/2024) - trivial claim
+	- Claim: $A, \neg A \vdash A \land \neg A$
+	- Goal: $A \land \neg A$
+	- Pf: Assume $A$ and $\neg A$
+		- Since $A$ and $\neg A$, we know $A \land \neg A$ ($\land - Introduction$)
+- Example #6 (29/01/2024):
+	- Claim: $A, \neg A \vdash B$
+	- Goal: $B$
+	- Want: $\neg \neg B$
+	- Pf: Assume $A$ and $\neg A$
+		- Suppose towards a contradiction that $\neg B$
+			- We already have $A \land \neg A$, which is a contradiction.
+		- Under the assumption $\neg B$, we had $A$ and $\neg A$, therefore $\neg \neg B$ (contr.)
+		- From $\neg \neg B$, we get $B$ (dbl neg)
+- Example #1 (31/01/2024):
+	- Claim: $(A \land B) \lor (C \land D) \equiv (D \land C) \lor (B \land A)$
+	- Pf: $(A \land B) \lor (C \land D) \equiv (B \land A) \lor (C \land D)$ ($\land - Comm$)
+	- $\equiv (B \land A) \lor (D \land C)$ ($\land - Comm$)
+	- $\equiv (D \land C) \lor (B \land A)$ $(\lor - Comm$)
+- Example #2 (31/01/2024) - Chain/Equivalence Proofs:
+	- Claim: $A \rightarrow B \equiv \neg B \rightarrow \neg A$
+	- Pf: 
+		- $A \rightarrow B \equiv \neg A \lor B$ ($impl.$)
+		- $\neg B \rightarrow \neg A \equiv B \lor \neg A$ (impl.)
+				    $\equiv B \lor \neg A$ (dbl. neg.)
+					$\equiv \neg A \lor B$ (comm.)
+	- Therefore $A \rightarrow B \equiv \neg B \rightarrow \neg A$
+- Example #3 (31/01/2024):
+	- Claim: $A \rightarrow (B \rightarrow C) \equiv (A \land B) \rightarrow C$
+	- Pf: $A \rightarrow (B \rightarrow C) \equiv (A \land B) \rightarrow C$
+		- $A \rightarrow (B \rightarrow C) \equiv \neg A \lor (\neg B \lor C)$ (impl.)
+		- $(A \land B) \rightarrow C \equiv \neg (A \land B) \lor C$ (impl.)
+					   $\equiv (\neg A \lor \neg B) \lor C$ (demorgan's)
+					   $\equiv \neg A \lor (\neg B \lor C)$ (assoc.)
+					   
+	- Therefore $A \rightarrow (B \rightarrow C) \equiv (A \land B) \rightarrow C$
