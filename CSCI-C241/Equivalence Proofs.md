@@ -10,7 +10,7 @@
 		- $\neg (p \lor q) \equiv \neg p \land \neg q$
 	- **Associative Laws**
 		- $p \land (q \land r) \equiv (p \land q) \land r$
-		- $p \lor (q \land r) \equiv p \lor (q \lor r)$
+		- $p \lor (q \lor r) \equiv p \lor (q \lor r)$
 	- **Material Implication**
 		- $p \rightarrow q \equiv \neg p \lor q$
 	- **Transitive Property**
