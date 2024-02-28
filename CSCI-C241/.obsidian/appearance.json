@@ -1,3 +1,7 @@
 {
-  "accentColor": ""
+  "accentColor": "",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "canvas_hide_name"
+  ]
 }

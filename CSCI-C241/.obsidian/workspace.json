@@ -4,18 +4,27 @@
     "type": "split",
     "children": [
       {
-        "id": "c1329811cda6a963",
+        "id": "0defe07ddf0d1dec",
         "type": "tabs",
         "children": [
           {
-            "id": "92912598ca208862",
+            "id": "f66ce10c891dab97",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "b10d19745147576d",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -44,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Contrapositive",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -121,12 +130,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,9 +147,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "92912598ca208862",
+  "active": "a449992f6e392833",
   "lastOpenFiles": [
-    "Welcome.md",
-    "Propositions.md"
+    "Pasted image 20240223103253.png",
+    "Pasted image 20240223102828.png",
+    "Untitled",
+    "Set Examples.md",
+    "Sets.md",
+    "Test Review.md",
+    "Untitled.md",
+    "CSCI-C 212.canvas",
+    "Informal Proofs.md",
+    "CSCI-C 212.md",
+    "AssumeG.png",
+    "Untitled 1.md",
+    "Pasted image 20240223160837.png",
+    "Pasted image 20240223160825.png",
+    "Pasted image 20240223153144.png",
+    "Exam (Cheat Sheet).md",
+    "Proof Examples.md",
+    "Pasted image 20240223103417.png",
+    "Pasted image 20240223103408.png",
+    "Pasted image 20240223103332.png",
+    "Pasted image 20240223103323.png",
+    "Pasted image 20240223103307.png",
+    "Numbers.md",
+    "Proofs.md",
+    "Practice Exam.md",
+    "Equivalence Proofs.md",
+    "Propositions.md",
+    "Welcome.md"
   ]
 }

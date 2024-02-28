@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6e3467b8efbe80c2",
+        "id": "be0be8cc9d5930c7",
         "type": "tabs",
         "children": [
           {
-            "id": "df6e42a022c4e00d",
+            "id": "344bf48994c29a7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,9 +18,15 @@
                 "source": false
               }
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "bd16895b9fa8a3f8",
+        "type": "tabs",
+        "children": [
           {
-            "id": "aeb1daa80bc3f074",
+            "id": "b8d1ee1bd6d25f4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +37,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,21 +164,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aeb1daa80bc3f074",
+  "active": "b8d1ee1bd6d25f4e",
   "lastOpenFiles": [
     "CSCI-C241/Sets.md",
-    "CSCI-C241/Proofs.md",
+    "CSCI-C241/Set Examples.md",
+    "CSCI-C212/Midterm (Side A).canvas",
+    "CSCI-C212/Midterm (Side B).canvas",
+    "Pasted image 20240226233332.png",
+    "Pasted image 20240226233121.png",
+    "Pasted image 20240226233051.png",
+    "Pasted image 20240226233020.png",
+    "Pasted image 20240226233014.png",
+    "Pasted image 20240226232932.png",
     "CSCI-C241/Proof Examples.md",
+    "Pasted image 20240226232230.png",
+    "Pasted image 20240226232159.png",
     "CSCI-C241/Numbers.md",
+    "CSCI-C241/Informal Proofs.md",
+    "CSCI-C241/Pasted image 20240117134841.png",
+    "CSCI-C241/Proofs.md",
     "CSCI-C241/Equivalence Proofs.md",
     "CSCI-C241/Existential Claims.md",
-    "CSCI-C241/Set Examples.md",
     "CSCI-C241/Welcome.md",
     "CSCI-C241/Propositions.md",
-    "Pasted image 20240117141612.png",
-    "Pasted image 20240117135038.png",
-    "Pasted image 20240117135033.png",
-    "Pasted image 20240117134841.png",
+    "CSCI-C241/Pasted image 20240117141612.png",
     "CSCI-C241/Homework/HW1 - CSCI-C241 - 16 January 2024.md",
     "CSCI-C291/Assignments/Assignment1.md",
     "CSCI-C241/Propositions/Propositions.md",
