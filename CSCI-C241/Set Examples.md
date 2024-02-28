@@ -57,4 +57,86 @@
 - Example #8 (07/02/2024)
 	- $\{2,4,6\}$ is a subset of $B$
 	- $B$ is a superset of $\{2,4,6\}$
-- 
+- Example #1 (26/02/2024)
+	- $A = \{1,2,3,4,5\}$
+	- $B = \{a,b,c,d\}$
+	- members of $A \times B$:
+		- $(1,a) \in A \times B$
+		- $(3, a) \in A \times B$
+		- $(4,c) \in A \times B$
+		- $A \times B = \{(1,a),(1,b),(1,c),(1,d),(2,a),(2,b),(2,c),(2,d),...,(5,d)\}$
+- Example #2 (26/02/2024) - Relations
+	- Relations on $\mathbb{Z}$
+		- $G = \{(x,y) \mid x \geq y\}$
+		- $E = \{(n, m) \mid n + m \text{ is even}\}$
+		- $\{(n,m) \mid m = 5+n\}$
+		- $\{(n,m) \mid n+m=5\}$
+		- $\{(n,m) \mid n+m \text{ is a prime number}\}$
+		- $\{(n,m) \mid n \text{ divides evenly into } m\}$
+		- $\{(n,m) \mid n \text{ is prime and } m \text{ is not prime}\}$
+			- Not actually a relationship between n & m
+		- $\{(n,m) \mid m \text{ is a multipe of } n\}$
+		- $\varnothing$ (the empty relation)
+- Example #1 (28/02/2024) - Symmetry
+	- $E = \{(p,q) \mid p \equiv q\}$
+		- $E$ is symmetric, because if $p \equiv q$, then $q \equiv p$
+	- $S = \{(s,t) \mid \text{the first symbol in } s = \text{the last symbol in } s\}$
+		- $S$ is not symmetric,
+			- because $S(\text{"nurse"}, \text{"run"})$ holds
+			- but $S(\text{"run"}, \text{"nurse"})$ does not
+	- $F = \{(x,y) \mid x+y=10\}$
+		- $F$ is symmetric, because $x+y = y+x$
+	- $G' = \{(x,y) \mid x > y\}$
+		- $G'$ is not symmetric,
+			- because $G'(6,4)$ holds, since $6 > 4$
+			- but $G'(4,6)$ does not, since $4 \ngtr 6$
+		- This is the opposite of symmetric, literally every pair in $G'$ is a counter example.
+	- $G = \{(x,y) \mid x \geq y\}$
+		- $G$ is not symmetric,
+			- because $G(6,4)$ holds, since $6 \geq 4$
+			- but $G(4,6)$ does not, since $4 \ngeq 6$
+- Example #2 (28/02/2024) - antisymmetric
+	- $G = \{(x,y) \mid x \geq y\}$
+		- $G$ is antisymmetric,
+			- because if $x \geq y$ and $y \geq x$, $x = y$
+	- $B = \{(s,t) \mid \text{s is a substring of t}\}$
+		- $B$ is antisymmetric
+			- if $s$ is a substring of $t$ and $t$ is a substring of $s$,
+			- $s = t$
+	- $G' = \{(x,y) \mid x > y\}$
+		- $G'$ is (technically) antisymmetric, for a trivial reason
+	- $S = \{(s,t) \mid \text{the first symbol in } s = \text{the last symbol in } s\}$
+		- $S$ is not antisymmetric
+			- $S(\text{"huh"}, \text{"hih"})$ and $S(\text{"hih"}, \text{"huh"})$
+			- but $\text{"huh"} \neq \text{"hih"}$
+- Example #3 (28/02/2024) - transitive
+	- $E = \{(p,q) \mid p \equiv q\}$
+		- $E$ is transitive
+			- if $E(p,q)$ and $E(q,r)$
+			- then $E(p,r)$
+	- $G = \{(x,y) \mid x \geq y\}$
+		- $G$ is transitive
+			- if $p \geq q$ and $q \geq r$
+			- then $p \geq r$
+	- $F = \{(x,y) \mid x+y=10\}$
+		- $F$ is not transitive
+			- $F(6, 4)$ and $F(4, 6)$ holds
+			- $F(6, 6)$ does not
+- Example #4 (28/02/2024) - tying into proofs
+	- $E = \{(x,y) \mid x-y \text{ is even}\}$
+	- Claim: $E$ is transitive
+	- Goal: $E(x,z)$
+		- $x - z$ is even
+	- Pf: Choose, $x,y,z \in \mathbb{R}$ and Assume $E(x,y)$ and $E(y,z)$
+		- So $x-y$ is even and $y-z$ is even
+			-  (So there are integers n and m with $x-y=2n$ and $y-z=2m$)
+		- $(x-y)+(y-z) = x-z$
+		- If you add 2 even numbers, the sum is an even number, so $x-z$ is even
+		- Because of the previous statement, $E(x,z)$
+- Example #5 (28/02/2024)
+	- $E_2 = \{(n,m) \mid n+m \text{ is even}\}$ on $\mathbb{Z}$
+	- Claim: $E_2$ is reflexive
+	- Goal: $E_2(n,n)$
+		- $n+n$ is even
+	- Pf: Choose $n \in \mathbb{Z}$
+		- $n+n = 2n$ and any integer times two is even, so $E_2(n,n)$

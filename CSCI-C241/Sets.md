@@ -6,7 +6,7 @@
 - Sets of:
 	- Formulas
 	- Vectors
-	- Numbers
+	- [[Numbers]]
 - Data Type (Programming)
 - Set Operations
 	- Union
@@ -66,4 +66,56 @@
 - Supersets
 	- If A is a subset of B, then B is a superset of A
 		- We write $B \supseteq A$ to mean "B is a superset of A"
-- 
+- Ordered Pair/Triple/n-tuple
+	- $(4, 5)$
+	- $(5, \text{"foo"}, \{2,4,6\})$
+	- For sets $A$ and $B$, the **Cartesian Product** of $A$ and $B$ is:
+		- $A \times B = \{(a,b) \mid a \in A \land b \in B\}$
+		- The set of all ordered pairs where the first component is a member of $A$ and the second component is a member of $B$
+	- Fact: For any finite sets $A$ and $B$, $\mid A \times B \mid = |A| \cdot |B|$
+- Properties/Sets
+	- Being an even number, $\{2n \mid n \in \mathbb{Z}\}$
+	- Being a member of $A$, $A = \{1,2,3,4,5\}$
+	- Relationships
+		- **Relations**: A set of ordered pairs where the first component is a member of $A$ and the second component is a member of $B$ is called a relation from $A$ to $B$
+			- $A$ is the domain
+			- $B$ is the codomain
+			- if the domain and the codomain are the same set $A$, we say it is a relation on $A$
+		- The Cartesian Product $A \times B$ is the biggest possible relation from $A$ to $B$
+		- Every relation from $A$ to $B$ is a subset of $A \times B$
+		- Properties but about how things relate to each other
+		- $x \geq y$, $\{(x,y) \mid x \geq y\}$
+		- One string being a substring of another, $\{(s,t) \mid \text{s is a substring of t}\}$
+		- Ways to define relation:
+			- Set-builder notation
+				- $G' = \{(x,y) \mid x > y\}$
+				- $G = \{(x,y) \mid x \geq y\}$
+				- $E = \{(n, m) \mid n + m \text{ is even}\}$
+				- $S = \{(s,t) \mid \text{the first symbol in } s = \text{the last symbol in } s\}$
+			- Set-list notation
+				- $R = \{(1,a), (2,b), (2,c), (3,c)\} \text{ from } A \text{ to } B$
+				- $R_2 = \{(1,2),(2,3),(3,5),(5,1)\} \text{ on } A$
+				- The greater than or equal to relation
+				- The substring relation
+			- Directed Graph
+		- Notations for Relations
+			- The following are the same thing:
+				- $(2,b) \in R$
+				- $R(2,b)$ - "prefix" notation
+				- $2Rb$ - "infix" notation
+		- Properties of Relations
+			- A relation $R$ on a set $A$ is reflexive if and only if **for every** $x \in A$, $R(x, x)$
+				- (everything is related to itself)
+				- $G$ is reflexive because for every $x \in \mathbb{Z}$, $G(x,x)$ since $x \geq x$
+				- The substring relation is reflexive, because every string is a substring for itself
+				- $F = \{(n,m) \mid n+m=5\}$ is not reflexive because $\neg F(3, 3) = 3+3 = 6 \neq 5$
+				- $S = \{(s, t) \mid \text{the first char in } s = \text{the last char in } t\}$
+			- A relation $R$ on a set $A$ is antireflexive if and only if **for every** $x \in A$, $\neg R(x,x)$
+				- (nothing is related to itself)
+				- $G'$ is antireflexive because for every $x \in \mathbb{Z}$, $\neg G'(x,x)$ since $x > x$ is false
+				- $S = \{(s, t) \mid \text{the first char in } s = \text{the last char in } t\}$
+					- is not antireflexive for the counterexample of $S(\text{"racecar"})$
+			- A relation $R$ on a set $A$ is symmetric if and only if **for all** $x,y \in A$, if $R(x,y)$, then $R(y,x)$
+			- A relation $R$ on a set $A$ is antisymmetric if and only if **for all** $x,y \in A$, if $R(x,y)$ and $R(y,x)$, then $x = y$
+				- $R$ on $A$ is antisymmetric if and only if for all $x,y \in A$, if $R(x,y)$ and $x \neq y$, then $\neg R(y,x)$
+			- A relation $R$ on a set $A$ is transitive if and only if **for all** $x,y,z \in A$, if $R(x,y)$ and $R(y,z)$, then $R(x,z)$
