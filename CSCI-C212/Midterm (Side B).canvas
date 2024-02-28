@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"2521d5d9d4584ff4","type":"file","file":"Pasted image 20240226233332.png","x":-1260,"y":211,"width":2291,"height":387},
+		{"id":"7525d7e059eca426","type":"file","file":"Pasted image 20240226232230.png","x":-1256,"y":-1928,"width":2273,"height":448},
+		{"id":"71c8c89743d622b7","type":"file","file":"CSCI-C212/Pasted image 20240223160825.png","x":-1256,"y":-1480,"width":2278,"height":496},
+		{"id":"e70e9d771e887c60","type":"file","file":"CSCI-C212/Pasted image 20240223160837.png","x":-1256,"y":-986,"width":2282,"height":775},
+		{"id":"9704cf71fe5c8755","type":"file","file":"Pasted image 20240226232932.png","x":-1260,"y":-210,"width":2291,"height":421},
+		{"id":"f2ba171fb45e545e","type":"file","file":"CSCI-C212/Pasted image 20240223153144.png","x":-1260,"y":-3059,"width":2277,"height":1131}
+	],
+	"edges":[]
+}

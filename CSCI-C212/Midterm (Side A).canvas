@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"2dd678e92278e831","type":"file","file":"CSCI-C212/Pasted image 20240223103253.png","x":-3157,"y":860,"width":1139,"height":366},
+		{"id":"4ce1b41e22113161","type":"file","file":"CSCI-C212/Pasted image 20240223103323.png","x":-3160,"y":1226,"width":1144,"height":412},
+		{"id":"fa878874386c91cb","type":"file","file":"CSCI-C212/Pasted image 20240223102828.png","x":-3151,"y":-895,"width":1140,"height":799},
+		{"id":"65aed6999ee692e3","type":"file","file":"CSCI-C212/Pasted image 20240223103128.png","x":-3151,"y":-94,"width":1141,"height":538},
+		{"id":"08fe0c5527f0c669","type":"file","file":"CSCI-C212/Pasted image 20240223103307.png","x":-3151,"y":445,"width":1139,"height":409},
+		{"id":"bcc0fe78e3ad2c34","type":"file","file":"CSCI-C212/Pasted image 20240223102943.png","x":-2010,"y":-895,"width":1141,"height":663},
+		{"id":"b3ffb136e4848323","type":"file","file":"CSCI-C212/Pasted image 20240223103408.png","x":-2010,"y":-248,"width":1143,"height":445},
+		{"id":"8b406c97658530ad","type":"file","file":"CSCI-C212/Pasted image 20240223103417.png","x":-2004,"y":199,"width":1138,"height":451},
+		{"id":"cf34fac77f8566f7","type":"file","file":"CSCI-C212/Pasted image 20240223103332.png","x":-2004,"y":651,"width":1142,"height":516},
+		{"id":"754691c045d3f6a1","type":"text","text":"**Tree-Related Data Structures:**\n- TreeMap: A $TreeMap$ is a map with a determined order, either by a natural ordering of the keys or that defined by a comparator.\n- TreeSet: A $TreeSet$ is a set with a determined order, either by a natural ordering or that defined by a Comparator, like a priority queue. \n**asda**","x":-2018,"y":1167,"width":1156,"height":471}
+	],
+	"edges":[]
+}
