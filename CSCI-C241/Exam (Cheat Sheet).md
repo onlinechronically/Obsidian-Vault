@@ -1,0 +1,109 @@
+- Propositional Logic
+	- English
+		- Premise Tags (if $x$, when $x$, while $x$, where $x$, in the case that $x$)
+		- Conclusion Tags (only if $x$, only when $x$, only in the case that $x$, $x$ is a necessary condition)
+		- Not implication (therefore, thus, hence, so)
+		- Causality is not either (because, since, due to)
+		- Other implication:
+			- $P \rightarrow Q$
+				- "if $P$, then $Q$"
+				- "$Q$ if $P$"
+				- "$P$ only if $Q$"
+				- "$P$ is a sufficient condition for $Q$"
+				- "$Q$ is a necessary condition for $P$"
+			- $P \leftrightarrow Q$
+				- "$P$ is a necessary and sufficient condition for $Q$"
+			- "$P$ is a sufficient condition for $Q$"
+				- $P \rightarrow Q$
+			- "$P$ is a necessary condition for $Q$"
+				- $Q \rightarrow P$
+	- $\neg, \land, \lor, \oplus, \rightarrow$
+	- Contradictions (Always FALSE)
+	- Tautology (Always TRUE)
+	- Existential Claims
+		- Prove by giving an example that has some property
+		- Truth Assignment
+	- Universal Claims
+		- Prove by showing everything (in some category) has some property.
+		- Truth Table
+	- Consistency
+		- A set of formulas is consistent if and only if, there is an assignment that satisfies all of the formulas in the set.
+		- Provable with a truth assignment
+		- Disprovable with a truth table that shows there's no assignment that satisfies all formulas
+	- Logical Equivalency $\equiv$
+		- The formulas are logically equivalent if and only if every assignment that satisfies one formula also satisfies the other (and vice versa).
+		- Provable with Matching Truth Tables
+		- Disprovable with a truth assignment
+	- Validity
+		- **Valid** if and only if every assignment that satisfies the premise also satisfies the conclusion
+		- **Invalid** if and only there exists an assignment that satisfies all the premises but not the conclusion
+- Proofs
+	- $\land - Elim$
+		- $P \land Q \vdash P$
+		- $P \land Q \vdash Q$
+	- $\land - Introduction$
+		- $P, Q \vdash P \land Q$
+	- $\lor - Introduction$ (Weakening)
+		- If you know $P$, then you can conclude $P \lor Q$ or $Q \lor P$
+	- $\lor - Elimination$ (Proof By Cases)
+		- If you know $P \lor Q$, and you have 2 subproofs:
+			- One assuming $P$ and proving $R$
+			- One assuming $Q$ and proving $R$
+		- Then you can conclude $R$ (outside the subproofs)
+	- Double Negative
+		- $\neg \neg P \vdash P$
+	- $Introduction$ ($\neg$) (Proof by Contradiction)
+		- Given a subproof assuming $P$, and proving $R$ and $\neg R$, we can conclude (outside the subproof) $\neg P$
+	- $Application$ ($\rightarrow$)
+		- $P \rightarrow Q$, $P \vdash Q$
+	- $Introduction$ ($\rightarrow$) (Direct Proof)
+		- If you have a subproof that starts with assuming $P$ and ends by proving $Q$, then you can conclude $P \rightarrow Q$ (outside of the subproof).
+		- Given a subproof assuming $P$ and proving $Q$, conclude $P \rightarrow Q$
+- Equivalence Proofs
+	- Rules
+		- **Commutative Laws**
+			- $p \land q \equiv q \land p$
+			- $p \lor q \equiv q \lor p$
+		- **Distributive Laws**
+			- $p \land (q \lor r) \equiv (p \land q) \lor (p \land r)$
+			- $p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)$
+		- **De Morgan's Laws**
+			- $\neg (p \land q) \equiv \neg p \lor \neg q$
+			- $\neg (p \lor q) \equiv \neg p \land \neg q$
+		- **Associative Laws**
+			- $p \land (q \land r) \equiv (p \land q) \land r$
+			- $p \lor (q \lor r) \equiv p \lor (q \lor r)$
+		- **Material Implication**
+			- $p \rightarrow q \equiv \neg p \lor q$
+		- **Transitive Property**
+			- If $x = y$ and $y = z$, then $x = z$
+			- If $p \equiv q$ and $q \equiv r$, then $p \equiv r$
+			- If $p \vdash q$ and $q \vdash r$, then $p \vdash r$
+		- **Double Negation**
+			- $\neg \neg p \equiv p$
+		- **Idempotence Laws**
+			- $p \land p \equiv p$
+			- $p \lor p \equiv p$
+		- **Absorption**
+			- $p \lor (p \land q) \equiv p$
+			- $p \land (p \lor q) \equiv p$
+		- **Currying**
+			- $A \rightarrow (B \rightarrow C) \equiv (A \land B) \rightarrow C$
+		- **Contrapositive**
+			- $p \rightarrow q \equiv \neg q \rightarrow \neg p$
+		- **Bi-Conditional**
+			- $p \leftrightarrow q \equiv \neg p \leftrightarrow \neg q$
+			- $p \leftrightarrow q \equiv (p \rightarrow q) \land (q \rightarrow p)$
+		- - Tautology ($\top$)
+			- $A \lor \neg A \equiv \top$
+			- $\top \land p \equiv p$
+			- $\top \lor p \equiv \top$
+		- Contradiction ($\bot$)
+			- $A \land \neg A \equiv \bot$
+			- $\bot \land p \equiv \bot$
+			- $\bot \lor p \equiv p$
+	- Strategy
+		1) Write both sides in terms of $\land, \lor, \neg$
+		2) Push all the negations on both sides, "inside" as far as they go using **De Morgan's Laws**
+		3) Choose to make the main connective on both sides, either $\land$ or $\lor$ and rewrite if needed using **Distributive Laws**
+![[AssumeG.png]]
