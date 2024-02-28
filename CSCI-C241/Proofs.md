@@ -1,20 +1,3 @@
-- **Direct Proof**
-	- This is the method of assuming some set of premises and using them to prove other statements, eventually leading to some sort of conclusion.
-	- You can use direct proof to show an argument is valid.
-- **Rules for Natural Deduction** - A specific set of eight rules (two for each connective):
-	- $\land$, $\lor$, $\neg$, $\rightarrow$
-	- Introduction Rules:
-		- How to prove formula with a particular main connective
-	- Elimination Rules:
-		- How to use a formula with a particular main connective
-	- Elimination ($\land$) (Simplification)
-		- If you know a formula of the form $P \land Q$, then you can conclude $P$ and you can conclude $Q$
-	- Introduction ($\land$) (Conjunction)
-		- If you know P and you know Q, then you can conclude $P \land Q$
-	- Elimination ($\neg$) (Double Negation)
-		- If you know $\neg \neg P$, then you can conclude $P$
-	- Elimination ($\rightarrow$) (Application)
-		- If you know $P \rightarrow Q$ and you know $P$, you can conclude $Q$
 - **Writing Proof**
 	- Pf: Assume $\neg \neg A \land D$ and $A \rightarrow (B \land C)$
 	- Since we know $\neg \neg A \land D$, we can conclude $\neg \neg A$ and $D$
@@ -32,7 +15,7 @@
 	- p1,p2,p3,pn $\vdash$ c
 	- There is a (direct) proof with assumptions p1,p2,p3,pn
 	- is valid iff premises $\vdash$ c
-- **Proof Rules**
+- **Proof Rules (Natural Deduction)**
 	- $\land - Elim$
 		- $P \land Q \vdash P$
 		- $P \land Q \vdash Q$
@@ -54,6 +37,9 @@
 	- $Introduction$ ($\rightarrow$) (Direct Proof)
 		- If you have a subproof that starts with assuming $P$ and ends by proving $Q$, then you can conclude $P \rightarrow Q$ (outside of the subproof).
 		- Given a subproof assuming $P$ and proving $Q$, conclude $P \rightarrow Q$
+		- Extra
+			- This is the method of assuming some set of premises and using them to prove other statements, eventually leading to some sort of conclusion.
+			- You can use direct proof to show an argument is valid.
 - **Reasons to start a Subproof**
 	- If you want to prove an implication
 		- (Start assuming the premise of the desired arrow formula)
@@ -71,11 +57,3 @@
 - **The principle of Explosion:** something is not true if you can use it to prove absolutely anything.
 - $\vdash P \lor \neg P$ - Law of Excluded Middle (need to use $\neg \neg P$)
 
-- **Informal Proofs**
-	- Proving an Existential Claim
-		- Give an example (and show that the example works)
-	- Proving a Universal Claim
-		- "Choose" a generic example and prove that it works
-			- "Choose a member" of A,
-			- "and try to prove it is a member of B"
-			- to prove $A \subseteq B$
