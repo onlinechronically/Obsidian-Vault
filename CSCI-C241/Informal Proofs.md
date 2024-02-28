@@ -1,0 +1,29 @@
+- **Informal Proofs**
+	- Proving an Existential Claim
+		- Give an example (and show that the example works)
+	- Proving a Universal Claim
+		- "Choose" a generic example and prove that it works
+			- "Choose a member" of A,
+			- "and try to prove it is a member of B"
+			- to prove $A \subseteq B$
+	- Rules
+		- Universal - Introduction ("Direct Proof")
+			- To prove that every $\star$ has property $P$, we "choose" a variable to represent a generic $\star$ and then prove that this variable has property $P$
+			- To prove "every $\star$ is", start by writing: "Choose a $\star$ $x$"
+		- Universal - "Elimination" (Application)
+			- If you know that "every $\star$ has property $P$" and you know that "$x$ is a $\star$", then you can conclude $x$ has property $P$
+		- Existential - Introduction
+			- To prove "there is a $\star$ with property $P$"
+				- Give an example of a $\star$
+				- Prove that said example has property $P$
+		- Existential - Elimination
+			- If you already know "there is a $\star$ with property $P$"
+				- "So there is a $\star$ with property $P$. Call it $x$"
+				- "Let $a$ be a $\star$ with property $P$ or Hence some $\star$ $M$ exists that has property $P$"
+			- Give a name to the $\star$ with property $P$ and use that name to prove something else
+		- Modus Tollens
+			- $p \rightarrow q, \neg q \vdash \neg p$
+		- Universal - Negation
+			- To prove a universal claim is False, give a counter example
+		- Existential - Negation
+			- To prove an existential claim is False, Proof by Contradiction

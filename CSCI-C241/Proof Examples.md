@@ -1,3 +1,4 @@
+### Natural Deduction
 - Example:
 	- Goal: C
 	- Want: $A \land B$, so I can apply with $(A \lor B) \rightarrow C$
@@ -139,6 +140,7 @@
 			- We already have $A \land \neg A$, which is a contradiction.
 		- Under the assumption $\neg B$, we had $A$ and $\neg A$, therefore $\neg \neg B$ (contr.)
 		- From $\neg \neg B$, we get $B$ (dbl neg)
+### Equivalence Proofs
 - Example #1 (31/01/2024):
 	- Claim: $(A \land B) \lor (C \land D) \equiv (D \land C) \lor (B \land A)$
 	- Pf: $(A \land B) \lor (C \land D) \equiv (B \land A) \lor (C \land D)$ ($\land - Comm$)
@@ -161,3 +163,152 @@
 					   $\equiv \neg A \lor (\neg B \lor C)$ (assoc.)
 					   
 	- Therefore $A \rightarrow (B \rightarrow C) \equiv (A \land B) \rightarrow C$
+### Informal Proofs
+- Example 1:
+	- Claim: For any real number x, $(x+2)(x-2) > -10$
+	- Goal: $(x+2)(x-2)>-10$
+	- Pf: Choose a real number $x$ (Assume $x$ is a real number)
+		- $(x+2)(x-2)=x^{2}-4$
+						$\geq 0 - 4$
+						$= -4$ (because $x^{2} \geq 0$)
+						$\gt -10$
+		- Therefore $(x+2)(x-2) > -10$
+			- (Hence for any real # x, $(x+2)(x-2)>-1$) - Optional
+- Example 2:
+	- Claim: For any sets $A, B, C$, $A \cap B \subseteq A \cup C$
+	- Goal: $A \cap B \subseteq A \cup C$
+	- Every member of $A \cap B$ is also a member of $A \cup C$
+	- Subgoal: $x \in A \cup C$
+	- Want: $x \in A$ or $x \in C$
+	- Pf: Choose sets $A$, $B$, and $C$
+		- $Subproof$
+			- Choose a member $x$ of $A \cap B$, so $x \in A$ and $x \in B$
+			- Since $x \in A$, $x \in A \cup C$
+			- Optional: (We chose a member of $A \cap B$ and proved it was also a member of $A \cup C$)
+			- Therefore, every member of $A \cap B$ is also a member of $A \cup C$
+			- So, $A \cap B \subseteq A \cup C$
+		- Example 3:
+			- Claim: For all sets A, B, C, and D, if $A \cup B \subseteq C$, then $A \setminus D \subseteq C \setminus D$
+			- Goal: $A \setminus D \subseteq C \setminus D$
+			- Pf: Choose sets $A$, $B$, $C$, and $D$
+				- Assume $A \cup B \subseteq C$ ("every member of $A \cup B$ is a member of $C$")
+					- Choose $o \in A \setminus D$
+					- So $o \in A$ and $o \notin D$
+					- Since $o \in A$, $o \in A \cup B$
+					- So we can apply $A \cup B \subseteq C$, and conclude $o \in C$
+					- This, with $o \notin D$, we can conclude $o \in C \setminus D$
+				- Therefore $A \setminus D \subseteq C \setminus D$
+					- (Therefore if $A \cup B \subseteq C$, the $A \setminus D \subseteq C \setminus D$)
+					- (Therefore for any sets A,B,C,D, if $A \cup B \subseteq C$, then $A \setminus D \subseteq C \setminus D$)
+		- Example 4:
+			- Claim: For all sets $A$, $B$, and $C$, if $A \subseteq B$, then $C \setminus A \subseteq C \setminus B$
+			- Goal: $C \setminus A \subseteq C \setminus B$
+			- Pf: Choose sets $A$, $B$, and $C$
+				- Assume $A \subseteq B$
+					- Choose $x \in C \setminus A$
+					- So, $x \in C$ and $x \notin A$
+			- To prove false (justification):
+				- A = $\{2,3\}$, B = $\{1,2,3,4\}$, C = $\{1,5\}$
+				- $C \setminus A = \{1,5\}$
+				- $C \setminus B = \{5\}$
+				- $A \subseteq B$
+				- $C \setminus A \nsubseteq C \setminus B$
+					- $1 \in C \setminus A$ and $1 \notin C \setminus B$
+- Example #5 (19/02/2024):
+	- Claim: $0.317$ is rational
+	- Pf:
+		- $0.317 = \frac{317}{1000}$
+		- Clearly $317$ and $1000$ are integers, and $1000 \neq 0$
+		- Therefore, $0.317$ is rational
+- Example #6 (19/02/2024):
+	- Claim: Every number that can be written as a terminating decimal is rational
+	- Goal: $x$ is rational
+		- $x = \frac{\text{some int}}{\text{some non zero int}}$
+	- Pf: Choose a number $x$ that can be written as a terminating decimal
+		- Let $d$ be the number of digits after the decimal in $x$
+		- $x = \frac{x \times 10^{d}}{10^{d}}$
+			- Optional: because $10^{d} \neq0$
+			- Clearly $10^{d}$ is an integer and $10^{d} \neq 0$
+			- $x \times 10^{d}$ is $x$ with the decimal moved to the right $d$ times.
+			- Since $d$ is the number of digits after the decimal in $x$, this results in an integer.
+			- Therefore (Optional: since $x = \frac{\text{some int}}{\text{some non zero int}}$), $x$ is rational
+		- $p = x$
+		- $10^{d}$ = $q$
+		- For each non-terminating decimal, it can be written 
+- Example #7 (19/02/2023):
+	- Claim: Every rational number is ...
+	- Pf: Choose a rational number $x$
+		- Since $x$ is rational, there exist integers $p$ and $q$ with $x = \frac{p}{q}$ and $q \neq 0$
+- Example #8 (19/02/2023):
+	- $A = \{3n + 1 \mid n \in \mathbb{Z}\}$
+	- $B = \{ab \mid a,b \in A\}$
+	- Members of $A$:
+		- $7 = 3*2+1$
+		- $4 = 3*1+1$
+		- $601 = 3*200 +1$
+		- $-5 = 3*(-2)+1$
+	- Members of $B$:
+		- $28 = 7*4$
+		- $-20 = 4*(-5)$
+		- $25 = (-5)*(-5)$
+	- Claim: $A = B$
+		- Every member of $A$ is a member of $B$
+		- Every member of $B$ is a member of $A$
+		- $A \subseteq B \land B \subseteq A$
+	- Pf: (we will show that $B \subseteq A$)
+		- Choose $x \in B$
+		- So there exist $a,b \in A$, with $x = a \cdot b$
+		- So there is $n \in \mathbb{Z}$ with $a = 3n +1$
+		- and there is a $n$, $d \in \mathbb{Z}$ with $b = 3d+1$
+		- $x = (3n+1)(3d+1) = 9nd+3n+3d+1 = 3(3nd+n+d) + 1$
+		- $3,n,d \in \mathbb{Z}$, so $3nd+n+d \in \mathbb{Z}$
+		- Therefore, $x \in A$
+	- To Impl:
+		- Choose $x \in A$
+		- Optional: So $x=3n+1$, for some integer $n$
+		- $1 \in A$, because $1 = 3(0) + 1$ and $0 \in \mathbb{Z}$
+		- $x \cdot 1 = x$
+		- $(x \cdot 1 = x) \in B$
+- Example #1 (21/02/2024):
+	- For any $n \in \mathbb{N}$, define
+		- $S_n = \{n*x \mid x \in \mathbb{Z}\}$
+		- member of $S_5$
+			- $15 = 5 \cdot 3$
+		- member of $S_{11}$
+			- $22 = 11 \cdot 2$
+		- $S_4$ = All multiples of 4
+		- $S_n$ = All multiples of $n$
+	- Goal:
+		- $S_2 \cup S_3 \cup ... \cup S_k \neq \mathbb{Z} \setminus \{1, -1\}$
+		- find a number in $\mathbb{Z}$ (an integer, not 1 or -1) but not in any of the sets up to $k$
+		- to show $c$ is not in any sets, we have to show that for every $j \leq k, c \notin S_j$
+	- Claim:
+		- For any $k \in \mathbb{N}$, with $k > 1$
+		- $S_2 \cup S_3 \cup ... \cup S_k \neq \mathbb{Z} \setminus \{1, -1\}$
+			- Universal claim (Every thing in Set $A$ is in Set $B$, and vice versa)
+			- Prove negation of ($=$) with a counter example
+	- Pf: Choose a $k \in \mathbb{N}$ with $k > 1$
+		- Let $c = k! + 1 = (1 \cdot 2 \cdot 3 \cdot ... \cdot k) + 1$
+		- Clearly $c \in \mathbb{Z} \setminus \{1, -1\}$
+		- We need to show $c \notin S_2 \cup S_3 \cup ... \cup S_k$
+			- Choose $j \in \mathbb{N} \land j > 1$
+			- $k!$ is a multiple of $j$
+			- $c$ is one more than a multiple of $j$
+			- So $c$ is not a multiple of $j$, meaning $c \notin S_j$
+		- Therefore $S_2 \cup S_3 \cup ... \cup S_k \neq \mathbb{Z} \setminus \{1, -1\}$
+- Example #2
+	- Claim: The product of a rational number and an irrational number is irrational
+		- Universal because it's referring to **any** pair of numbers
+	- Goal:
+		- $k \cdot p$ is irrational (not rational)
+		- Subgoal: contradiction
+			- maybe $p$ is rational
+			- $p = \frac{int}{\text{nonzero } int}$
+	- Pf: Choose a rational number $k$ (with $k \neq 0$) and an irrational number $p$
+		- So there exist integers $a, b$ with $k = \frac{a}{b}$ and $b \neq 0$
+		- Suppose towards a contradiction that $k \cdot p$ is rational
+			- So there exist integers $x$ and $y$ with $k \cdot p = \frac{x}{y}$ and $y \neq 0$
+			- $p = \frac{x}{y} \cdot \frac{1}{k} = \frac{x}{y} \cdot \frac{1}{\frac{a}{b}} = \frac{x}{y} \cdot \frac{b}{a} = \frac{xb}{ya}$
+			- Since $a,b,x,y \in \mathbb{Z}$, we know $xb \in \mathbb{Z}$ and $ya \in \mathbb{Z}$
+			- $ya \neq 0$ because $y \neq 0 \land a \neq 0$
+		- So $p$ is rational, we assumed $p$ is irrational, so therefore $k \cdot p$ is irrational
