@@ -5,6 +5,7 @@
 - Rational Numbers
 	- Numbers that can be written as a ratio of integers
 	- $\mathbb{Q} = \{ \frac{p}{q} \mid p \in \mathbb{Z} \land q \in \mathbb{Z} \land q \neq 0 \}$
+	- A number $x$ is rational if and only if, there exist integers $p$ and $q$, such that $x = \frac{p}{q}$ and $q \neq 0$
 - Real Numbers
 	- $\mathbb{R} =$ every # on the number line
 	- $\mathbb{R} =$ every # with a decimal expansion
