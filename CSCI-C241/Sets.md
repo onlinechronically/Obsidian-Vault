@@ -119,3 +119,30 @@
 			- A relation $R$ on a set $A$ is antisymmetric if and only if **for all** $x,y \in A$, if $R(x,y)$ and $R(y,x)$, then $x = y$
 				- $R$ on $A$ is antisymmetric if and only if for all $x,y \in A$, if $R(x,y)$ and $x \neq y$, then $\neg R(y,x)$
 			- A relation $R$ on a set $A$ is transitive if and only if **for all** $x,y,z \in A$, if $R(x,y)$ and $R(y,z)$, then $R(x,z)$
+			- Functions:
+				- Definition:
+					- **Uniqueness**: A relation $R$ from a set $A$ to a set $B$ is a function if and only if **for every** $x \in A$ and $y,z \in B$, if $R(x,y)$ and $R(x,z)$, then $y = z$
+					- **Existence**: **For every** $x \in A$, there exists an $y \in B$ with $R(x,y)$
+				- A relation $R$ from $A$ to $B$ is a **partial function** if and only if it meets the uniqueness requirement for being a function
+					- Technically, every function is a partial function
+				- When we want to emphasise that a function really is a function and not a partial function, we say it is a **total function**
+					- "function" and "total function" mean the same thing
+				- A function $f \colon A \rightarrow B$ is **one-to-one** (an injection) if and only if for any $x,y \in A$, if $f(x) = f(y)$, then $x=y$
+			- Ways to Define Functions
+				- Set-Builder Notation
+					- $\{(s,n) \mid n = |s|\}$
+				- English
+					- The length function on Strings
+				- Function Notation
+					- $f(s) = |s|$
+				- Directed Graph
+				- Set-List Notation
+					- $g = \{(a,1),(b,3),(c,3),(d,4)\}$
+				- We write $f \colon A \rightarrow B$ to mean "$f$ is a function domain $A$ and codomain $B$"
+				- Piecewise Notation:
+					- $h \colon \mathbb{R} \rightarrow \mathbb{R}$
+					- $h(x) =$ $\begin{cases} \sqrt{x} \text{ if } x>0 \\ 100 \text{ if } x = 0 \\ x^{2} \text{ if } x < 0 \end{cases}$
+					- $h(16) = \sqrt{16} = 4$
+					- $h(-3) = (-3)^2 = 9$
+					- $h(0) = 100$
+				- 

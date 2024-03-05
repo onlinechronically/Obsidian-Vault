@@ -140,3 +140,53 @@
 		- $n+n$ is even
 	- Pf: Choose $n \in \mathbb{Z}$
 		- $n+n = 2n$ and any integer times two is even, so $E_2(n,n)$
+- Example #1 (04/03/2024)
+	- Define $A$ on Strings, by $A = \{(s,t) \mid s \text{ is an anagram of } t\}$
+	- $A(\text{"stop"}, \text{"opts"})$
+	- $\neg A(\text{"foobar"}, \text{"barof"})$
+	- Does $A$ have property $F$
+		- No, $A(\text{"stop"}, \text{"pots"})$ and $A(\text{"stop"}, \text{"opts"})$ but $\text{"pots"} \neq \text{"opts"}$
+- Example #2 (04/03/2024)
+	- Define $S$ on Strings by $S = \{(s,t) \mid s \text{ is } t \text{ reversed}\}$
+	- $S(\text{abcd}, \text{dcba})$
+	- Does $S$ have property $F$
+		- Choose the Strings x,y,z
+		- if $S(x,y)$ and $S(x,z)$, then $y$ is $x$ backwards and $z$ is $x$ backwards
+		- if $z$ and $y$ are both $x$ backwards, then they must be the same string
+	- Does $S$ meet existence?
+		- 
+- Example #3 (04/03/2024)
+	- Define $T_1$ on $\mathbb{N}$
+	- $T_1 = \{(x,y) \mid x+y=100\}$
+	- Does $T_1$ meet the uniqueness requirement for a function?
+		- If $x+y=100$ and $x+z=100$ does that mean $y=z$
+			- $y=100-x$
+			- $z=100-x$
+		- So, $y = z$
+	- Does $T_1$ meet the existence requirement for a function?
+		- No, because if $x = 101$, there is no $y$ with $x+y=100$
+- Example #4 (04/03/2024)
+	- Define $T_2$ on $\mathbb{Z}$
+	- $T_2 = \{(x,y) \mid x+y =100\}$
+	- $T_2$ is a function, not just a partial function
+- Example #5 (04/03/2024)
+	- $S \colon \text{ Strings } \rightarrow \text{ Strings}$
+	- $S = \{(s,t) \mid s \text{ is the reverse of } t\} = \{(s,t) \mid t \text{ is the reverse of } s\}$
+	- $S(x) =$ the reverse of $x$
+	- $S$ is one-to-one
+		- if $S(x) = S(y)$ means, if the reverse of $x$ equals the reverse of $y$
+- Example #6 (04/03/2024)
+	- $h \colon \mathbb{R} \rightarrow \mathbb{R}$
+	- $h(x) =$ $\begin{cases} \sqrt{x} \text{ if } x>0 \\ 100 \text{ if } x = 0 \\ x^{2} \text{ if } x < 0 \end{cases}$
+	- $h$ is not one-to-one
+	- $h(-10) = 100$
+	- $h(0) = 100$
+- Example #3 (04/03/2024)
+	- $a \colon \mathbb{R} \rightarrow \mathbb{R}$
+	- $a(x) = 5x-7$
+	- Claim: $a$ is one-to-one
+	- Pf:
+		- Choose $x,y \in \mathbb{R}$ and $a(x) = a(y)$
+		- Since $a(x) = a(y)$, we know $5x - 7 = 5y - 7$
+		- Since $5x - 7 = 5y - 7$, we know $5x = 5y$
+		- Since $5x = 5y$, we know $x = y$, therefore $a$ is one-to-one
