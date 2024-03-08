@@ -190,3 +190,55 @@
 		- Since $a(x) = a(y)$, we know $5x - 7 = 5y - 7$
 		- Since $5x - 7 = 5y - 7$, we know $5x = 5y$
 		- Since $5x = 5y$, we know $x = y$, therefore $a$ is one-to-one
+- Example #1 (06/03/2024)
+	- $f \colon \mathbb{R} \rightarrow \mathbb{R}$
+		- $f(x) = x^2$
+		- Not 1:1, $f(2) = 4 = f(-2)$
+	- $f_2 \colon [0, \infty) \rightarrow \mathbb{R}$
+		- $[0, \infty) = \{x \mid x \in \mathbb{R} \land x \geq 0\}$
+		- 1:1, Every input has a different output
+	- $f_-1 \colon \mathbb{R} \rightarrow [0, \inf)$
+		- $f_-1 = \{(y,x) \mid x^2 = y\}$
+		- Not a function, there is no $x \in [0, \infty)$
+		- $f(x) = -5$
+			- $x^2 = -5$
+	- $f_3 \colon [0, \infty) \rightarrow [0, infty)$
+		- $f_3(x) = x^2$
+		- The inverse of $f_3$
+			- $f_3' \colon [0, \infty) \rightarrow [0, infty)$
+- Example #2 (06/03/2024) - Proof for onto
+	- $\lfloor x \rfloor$ = $x$ rounded down to the nearest smaller integer
+		- floor function
+	- $\lceil x \rceil$
+	- $c \colon \mathbb{R} \rightarrow \mathbb{R}$
+	- $c(x) = \lceil x \rceil$
+	- It is not 1:1, $c(1.8) = 2 = c(1.9)$
+	- It is onto, there is no $x \in \mathbb{R}$ with $c(x) = 1.5$
+	- $c_2 \colon \mathbb{R} \rightarrow \mathbb{Z}$
+	- $c_2(x) = \lceil x \rceil$
+	- $c_2$ is onto
+	- Claim: $c_2$ is onto
+	- Goal: There exists a real number that fits $c_2$ for any given integer
+	- Pf: Choose $y \in \mathbb{Z}$
+		- Let $x = y - 0.1$ where $x \in \mathbb{R}$
+			- $f(x) = \lceil x \rceil = \lceil y - 0.1 \rceil$
+		- Since $y \in \mathbb{Z}$, $\lceil y - 0.1 \rceil = y$, so there exists an $x \in \mathbb{R}$ with $f(x) = y$
+- Example #3 (06/03/2024)
+	- $a \colon Str \rightarrow \mathbb{N}$
+	- $a(s) =$ the amount of a's in the string $s$
+	- Claim: $a$ is onto
+	- Pf: Choose $y \in \mathbb{N}$
+		- Let $s \in \text{Str}$ with only the letter "a" appearing $y$ times next to itself
+		- Clearly $s$ contains the character "a" the same amount of times as $y$
+		- So, $a(s) = y$ and $a$ is onto
+- Example #4 (06/03/2024) - Cardinality
+	- $B = \{b \mid b \text{ is a binary string starting with } 1\}$
+	- $\mathbb{Z}^+ = {n \mid n \in \mathbb{Z} \land n > 0}$
+	- $|B| = |\mathbb{Z}^+|$
+		- because $f \colon Z^+ \rightarrow B$
+		- $f(n) = n \text{ written in binary}$ and $f$ is a bijection
+- Example #5 (06//03/2024)
+	- Claim: $|\mathbb{N}| = |\mathbb{Z}|$
+	- Pf: Define a bijection $f \colon \mathbb{Z} \rightarrow \mathbb{N}$ as follows:
+		- $f(n) =$ $\begin{cases}2n \text{ if } n \geq 0 \\ 2(-n)-1 \text{ if } n <0 \end{cases}$
+		- $f$ is a bijection

@@ -122,12 +122,16 @@
 			- Functions:
 				- Definition:
 					- **Uniqueness**: A relation $R$ from a set $A$ to a set $B$ is a function if and only if **for every** $x \in A$ and $y,z \in B$, if $R(x,y)$ and $R(x,z)$, then $y = z$
+						- No input is mapped to more than one output
 					- **Existence**: **For every** $x \in A$, there exists an $y \in B$ with $R(x,y)$
+						- Every input is mapped to at least one output
 				- A relation $R$ from $A$ to $B$ is a **partial function** if and only if it meets the uniqueness requirement for being a function
 					- Technically, every function is a partial function
 				- When we want to emphasise that a function really is a function and not a partial function, we say it is a **total function**
 					- "function" and "total function" mean the same thing
-				- A function $f \colon A \rightarrow B$ is **one-to-one** (an injection) if and only if for any $x,y \in A$, if $f(x) = f(y)$, then $x=y$
+				- A function $f \colon A \rightarrow B$ is **one-to-one** (an injection) if and only if for every $x,y \in A$, if $f(x) = f(y)$, then $x=y$
+					- A function $f \colon A \rightarrow B$ is **onto** (a surjection) if and only if for every $y \in B$ there is an $x \in A$ with $f(x) = y$
+				- A function that is both **one-to-one** and **onto** is called a **bijection**
 			- Ways to Define Functions
 				- Set-Builder Notation
 					- $\{(s,n) \mid n = |s|\}$
@@ -145,4 +149,20 @@
 					- $h(16) = \sqrt{16} = 4$
 					- $h(-3) = (-3)^2 = 9$
 					- $h(0) = 100$
-				- 
+			- Functions and Cardinality:
+				- If there is a bjection from $A \rightarrow B$, $|A| = |B|$
+				- If there is a one-to-one function from $A \rightarrow B$, $|A| \leq |B|$
+					- For every input it must relate to an output. but not vice versa
+				- If there is an onto function from $A \rightarrow B$, $|A| \geq |B|$
+					- For every output, there must be an input that relates to said output.
+				- **Definitions:**
+					- Two sets $A$ and $B$ have the same cardinality if and only if there is a bijection $A \rightarrow B$
+					- If there is a one-to-one function $A \rightarrow B$, then $|B| \geq |A|$
+					- If there is an onto function $A \rightarrow B$, then $|A| \geq |B|$
+					- Any set $A$ with a cardinality smaller than or equal to $|\mathbb{N}|$ is countable.
+						- If there is a bijection $A \rightarrow \mathbb{N}$ then $A$ is countable infinite
+							- $|\mathbb{N}| = \aleph_0$ 
+						- $|\mathbb{Z} \times \mathbb{Z}| = |\mathbb{N}|$
+						- $|\mathbb{Q}| = |\mathbb{N}|$
+						- $|\mathbb{R}| > |\mathbb{N}|$
+						- Watch: Vsauce Tarski Paradox
