@@ -129,9 +129,12 @@
 					- Technically, every function is a partial function
 				- When we want to emphasise that a function really is a function and not a partial function, we say it is a **total function**
 					- "function" and "total function" mean the same thing
-				- A function $f \colon A \rightarrow B$ is **one-to-one** (an injection) if and only if for every $x,y \in A$, if $f(x) = f(y)$, then $x=y$
+				- Other Definitions:
+					- A function $f \colon A \rightarrow B$ is **one-to-one** (an injection) if and only if for every $x,y \in A$, if $f(x) = f(y)$, then $x=y$
+						- Two different inputs cannot map to the same output
 					- A function $f \colon A \rightarrow B$ is **onto** (a surjection) if and only if for every $y \in B$ there is an $x \in A$ with $f(x) = y$
-				- A function that is both **one-to-one** and **onto** is called a **bijection**
+						- Every member of the codomain must be mapped to by at least one member of the domain
+					- A function that is a **bijection** is both **one-to-one** and **onto**
 			- Ways to Define Functions
 				- Set-Builder Notation
 					- $\{(s,n) \mid n = |s|\}$
