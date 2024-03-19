@@ -1,0 +1,54 @@
+- Example #0 (18/03/2024) - Example Definitions
+	- $E(x): x \text{ is even}$
+	- $P(x): x \text{ is positive}$
+	- $N(x): x \text{ is a natural number}$
+	- $A(x): x \in A = \{0,2,4,6,8\}$
+- Example #1 (18/03/2024)
+	- $\forall x E(x)$
+	- "For every x, x is even"
+	- "Everything is even"
+	- If the universe was $\mathbb{N}$
+		- then $\forall x E(x)$ would mean "Every natural number is even"
+		- and so $\forall x E(x)$ is false
+	- If the universe was $\{0,2,4,6,8\}$
+		- then $\forall x E(x)$ means "All #'s in this set are even"
+		- and so $\forall x E(x)$ is true
+- Example #2 (18/03/2024)
+	- "Every natural number is even" in FOL?
+	- $\forall x (N(x) \rightarrow E(x))$
+		- "For all x, if x is a natural number, the x is even"
+- Example #3 (18/03/2024)
+	- $\forall x (P(x) \land E(x))$
+		- "For all x, x is positive and even"
+		- "Everything is both positive and even"
+- Example #4 (18/03/2024)
+	- There exists some positive number that is even
+	- $\exists x (P(x) \land E(x))$
+- Example #5 (18/03/2024)
+	- $\neg \forall x E(x) \equiv \exists x \neg E(x)$
+		- "It's not true that everything is even"
+		- "There exists a thing that is not even"
+		- "Not everything is even"
+		- "Not all things are even"
+- Example #6 (18/03/2024)
+	- $\neg \forall x (N(x) \rightarrow E(x)) \equiv \exists x \neg (N(x) \rightarrow E(x))$
+		- "It's not true that every natural number is even"
+	- $\exists x (N(x) \land E(x))$
+- Example #7 (18/03/2024)
+	- $\neg \exists x E(x)$
+		- "There does not exist an even number"
+		- "There are no even numbers"
+		- "For every number x, x is not even"
+			- $\forall x \neg E(x)$
+- Example #8 (18/03/2024)
+	- The universe is some collection of shapes with arrows between some of them
+	- S(x): x is solid
+	- C(x): x is a circle
+	- P(x,y): x points to y
+	- $\forall x \exists y P(x,y)$ - Universal Existential ("Buddy System")
+		- "For every shape x, there exists a shape y, that x points to"
+		- This is true for the graph (from class) because every shape had an arrow pointing to a shape
+	- $\exists y \forall x P(x,y)$ - Existential Universal (There is one person who is friends, with everyone, "Tom on MySpace")
+		- "There exists a shape y, where every shape x points to y"
+		- Prove this for a single of the shapes
+- Example #9 (18/03/2024)

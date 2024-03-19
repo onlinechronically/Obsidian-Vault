@@ -1,0 +1,25 @@
+- Includes all propositional logic connectives
+	- $\land$, $\lor$, $\rightarrow$, $\neg$, etc.
+- Predicates
+	- Unary Predicates
+		- B(x): x is blue
+		- E(x): x is an even #
+		- C(x): x is a countable set
+		- $S(x): x \geq 17$
+	- Binary Predicates
+		- $G(x,y): x \geq y$
+		- $S(x,y): x \text{ is a subset  of } y$
+		- $P(x,y): x \text{ is } y\text{'s parent}$
+- Quantifiers
+	- Universal quantifier ($\forall$) (\\forall)
+	- $\forall x$
+		- "For every x"
+		- "For all x"
+	- $\forall x (P(x) \rightarrow \dots)$
+		- "For all x, if x with property P, ..."
+	- Existential quantifier ($\exists$) (\\exists)
+	- $\exists x$
+		- "There exists an x such that"
+		- "For some x"
+	- $\exists x (P(x) \land ...)$
+		- "There exists an x with prop p, ..."
