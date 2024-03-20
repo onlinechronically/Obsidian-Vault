@@ -1,0 +1,54 @@
+- Example #1 (20/03/2024):
+	- $n=0$, $2^n=1$, $3n=0$
+	- $n=1$, $2^n=2$, $3n=3$
+	- $n=2$, $2^n=4$, $3n=6$
+	- $n=3$, $2^n=8$, $3n=9$
+	- $n=4$, $2^n=16$, $3n=12$
+	- $n=5$, $2^n=32$, $3n=15$
+	- $n=6$, $2^n=64$, $3n=18$
+	- As $n$ goes up by one, $3n$ goes up by $3$ and $2^n$ goes up by $2^n$
+	- for $n \geq 2$, $2^n$ is bigger than $3$. So if $n \geq 2$, then once $2^n > 3n$, $2^n$ stays bigger than $3n$ as $n$ gets bigger.
+	- at $n=4$, $2^4 = 16 > 12 = 3 \cdot 4$
+	- Claim: For any integer $n \geq 4$, $2^n > 3n$
+	- Induction Goal: $2^{k+1} > 3(k+1) = 3k+3$
+	- Pf:
+		- (Base Case: $n=4$)
+			- $2^4 = 15$
+			- $3(4) = 12$
+		- So $2^4 > 3(4)$
+		- (Induction Case)
+			- Assume that $2^k > 3k$ for some $k \in \mathbb{Z}$ where $k \geq 4$
+				- $2^{k+1} = 2^k \cdot 2$
+				- $> 2 \cdot 3k$
+				- $= 3k + 3k$ (because $2^k > 3k$)
+				- $>3k+3$ ($3k>3$ because $k \geq 4$)
+				- $= 3(k+1)$
+			- So $2^{k+1} > 3(k+1)$
+	- **Bad Base Case:**
+		- $2^4 > 3 \cdot 4$
+		- $16 > 12$
+	- **Okay but Weird Base Case**
+		- $16 > 12$
+		- $2^4 > 3
+	- **Also Fine but Weird Base Case**
+- Example #2 (20/03/2024):
+	- Claim: For any finite set $A$, if $|A| = n$, then $A$ has $2^n$ subsets $|\mathcal{P}(A)| = 2^{|A|}$
+	- Goal: Every set with $k+1$ members has $2^{k+1}$ subsets
+	- Pf:
+	- Choose a finite set $A$, and let $n = |A|$
+		- (Base Case: $n = 0$)
+			- $A = \varnothing$
+			- $A$ has $1$ subset, $\varnothing \subseteq \varnothing$
+			- $2^0 = 1$
+			- So $A$ has $2^0$ subsets
+		- (Induction Case: $A$ has $k+1$ members)
+			- Assume that every set with $k$ members has $2^k$ subsets for some $k \in \mathbb{N}$
+				- $|A| = k+1$
+				- $A = \{a_1,a_2,...,a_k,a_{k+1}\}$
+				- Consider the set $A' = \{a_1,a_2,...,a_k\}$
+				- $A'$ has $k$ members
+				- So, by our induction hypothesis, we know $A'$ has $2^k$ subsets
+				- Every subset of $A'$ is also a subset of $A$
+				- If we take each subset of $A'$ and add $a_{k+1}$ to it, we get another set of $A$
+			- This totals to $2^k + 2^k$ subset of $A
+			- $2^k + 2^k = 2 \cdot 2^k = 2^{k+1}$

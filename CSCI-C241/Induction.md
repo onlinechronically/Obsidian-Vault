@@ -1,0 +1,23 @@
+- Proof by Induction
+	- A natural number is one of:
+		- 0, or
+		- $k+1$ for some natural number $k$
+- Numerical Induction - Proving a claim is true for all Natural Numbers
+	- If $x > y$
+	- Then:
+		- For any $a \in \mathbb{R}$
+			- $x+1 > y+a$
+			- $x-a>y-a$
+			- $xa > ya$ for any $a > 0$
+			- $\frac{x}{a} > \frac{y}{a}$ for any $a > 0$
+			- $xa < ya$ for any $a < 0$
+			- $\frac{x}{a} < \frac{y}{a}$ for any $a < 0$
+			- $x^2 > y^2$ for any $x,y > 0$
+			- $a^x > a^y$ for any $a > 1$
+	- To prove that a claim $P(n)$ is true for every $n \in \mathbb{N}$
+		- Prove the claim is true when $n = 0$ (**Base Case/Step**)
+			- Prove $P(0)$
+		- Prove that if the claim is true for some natural number, then it must also be true for the next natural number (**Induction Case/Step**)
+			- Prove $P(k) \rightarrow P(k+1)$
+		- Assume $P(k)$ is true for $k \in \mathbb{N}$ and try to prove $P(k+1)$ is true
+		- 
