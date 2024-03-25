@@ -6,7 +6,7 @@
 	- If $x > y$
 	- Then:
 		- For any $a \in \mathbb{R}$
-			- $x+1 > y+a$
+			- $x+a > y+a$
 			- $x-a>y-a$
 			- $xa > ya$ for any $a > 0$
 			- $\frac{x}{a} > \frac{y}{a}$ for any $a > 0$
