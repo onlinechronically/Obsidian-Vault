@@ -29,8 +29,7 @@
 		- $16 > 12$
 	- **Okay but Weird Base Case**
 		- $16 > 12$
-		- $2^4 > 3
-	- **Also Fine but Weird Base Case**
+		- $2^4 > 3$
 - Example #2 (20/03/2024):
 	- Claim: For any finite set $A$, if $|A| = n$, then $A$ has $2^n$ subsets $|\mathcal{P}(A)| = 2^{|A|}$
 	- Goal: Every set with $k+1$ members has $2^{k+1}$ subsets

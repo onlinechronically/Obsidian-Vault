@@ -117,7 +117,7 @@
 					- is not antireflexive for the counterexample of $S(\text{"racecar"})$
 			- A relation $R$ on a set $A$ is symmetric if and only if **for all** $x,y \in A$, if $R(x,y)$, then $R(y,x)$
 			- A relation $R$ on a set $A$ is antisymmetric if and only if **for all** $x,y \in A$, if $R(x,y)$ and $R(y,x)$, then $x = y$
-				- $R$ on $A$ is antisymmetric if and only if for all $x,y \in A$, if $R(x,y)$ and $x \neq y$, then $\neg R(y,x)$
+				- if $R(x,y)$ and $x \neq y$, then $\neg R(y,x)$
 			- A relation $R$ on a set $A$ is transitive if and only if **for all** $x,y,z \in A$, if $R(x,y)$ and $R(y,z)$, then $R(x,z)$
 			- Functions:
 				- Definition:
