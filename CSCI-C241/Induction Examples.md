@@ -51,3 +51,62 @@
 				- If we take each subset of $A'$ and add $a_{k+1}$ to it, we get another set of $A$
 			- This totals to $2^k + 2^k$ subset of $A
 			- $2^k + 2^k = 2 \cdot 2^k = 2^{k+1}$
+- Example #1 (25/03/2024):
+	- Claim: For any $n \in \mathbb{N}$ where $n > 0$, the sum of all integers from $1$ up to $n$ is $\frac{n(n+1)}{2}$
+	- Goal: $\frac{(k+1)(k+1+1)}{2}$
+	- Pf:
+		- (Base Case, $n=1$):
+			- The sum of all integers from $1$ up to $1$ is $1$
+			- $\frac{1(1+1)}{2} = \frac{2}{2} = 1$
+			- So, the sum of all integer from $1$ up to $1$ is $\frac{1(1+1)}{2}$
+		- (Inductive Case)
+			- Assume the sum of all integers from $1$ up to $k$ is $\frac{k(k+1)}{2}$, for some int $k > 0$
+			- The sum of all ints from $1$ to $k+1$ = (the sum of all ints from $1$ to $k$) + ($k+1$)
+			- $= \frac{k(k+1)}{2} + (k+1)$ (because Induction Hypothesis)
+			- $= \frac{k(k+1) + 2(k+1)}{2}$
+			- $= \frac{(k+1)(k+2)}{2}$
+			- $= \frac{(k+1)(k+1+1)}{2}$
+- Example #2 (25/03/2024):
+	- Claim: For any $n \in \mathbb{N}$ where $n > 0$, the sum of all integers from $1$ up to $n$ is $\frac{n(n+1)}{2}$
+		- $\sum\limits^{n}_{i=1}{i}$
+	- Goal: $\frac{(k+1)(k+1+1)}{2}$
+	- Pf:
+		- (Base Case, $n=1$):
+			- The sum of all integers from $1$ up to $1$ is $1$
+			- $\frac{1(1+1)}{2} = \frac{2}{2} = 1$
+			- $\sum\limits^{1}_{i=1}{i} = 1$
+			- So, the sum of all integer from $1$ up to $1$ is $\frac{1(1+1)}{2}$
+		- (Inductive Case)
+			- Assume the sum of all integers from $1$ up to $k$ is $\sum\limits^{k}_{i=1}{i}$, for some int $k > 0$
+			- $\sum\limits^{k+1}_{i=1}{i} = \sum\limits^{k}_{i=1}{i} + (k+1)$
+			- 
+- Example #3 (25/03/2024): Summation Notation
+	- $1+3+5+7+9+11$
+	- $\sum\limits^{i=5}_{i=0}{2i+1}$
+	- $= (2(0)+1) + (2(1)+1) + (2(2)+1) + (2(3)+1) + (2(4)+1) + (2(5)+1)$
+	- $=1+3+5+6+9+11$
+	- $=25$
+- Example #4 (25/03/2024): Summation Notation
+	- $\prod\limits^{5}_{i=1}{\frac{1}{i}} = \frac{1}{1} \cdot \frac{1}{2} \cdot \frac{1}{3} \cdot \frac{1}{4} \cdot \frac{1}{5}$
+- Example #5 (25/03/2024):
+	- For any $n \in \mathbb{N}$
+	- Claim: $\sum\limits^{n}_{i=0}{\frac{1}{2^i}} = 2- \frac{1}{2^n}$
+	- Goal: $\sum\limits^{k+1}_{i=0}{\frac{1}{2^i}} = 2- \frac{1}{2^k+1}$
+	- Pf:
+		- (Base Case, $n=0$)
+			- $\sum\limits^{n}_{i=0}{\frac{1}{2^0}} = \sum\limits^{n}_{i=0}{\frac{1}{1}}$
+			- $= \sum\limits^{n}_{i=0}{1}$
+			- $= 1$
+			- $=2-1$
+			- $= 2-\frac{1}{1}$
+			- $= 2- \frac{1}{2^0}$
+		- (Inductive Case)
+			- Assume $\sum\limits^{k}_{i=0}{\frac{1}{2^i}} = 2- \frac{1}{2^k}$ for some $k \in \mathbb{N}$
+			- $\sum\limits^{k+1}_{i=0}{\frac{1}{2^i}} = \sum\limits^{k}_{i=0}{\frac{1}{2^i}} + \frac{1}{2^{k+1}}$
+			- $= 2-\frac{1}{2^k} + \frac{1}{2^{k+1}}$ (By the Induction Hypothesis)
+			- $= 2- 2(\frac{1}{2^k}) + \frac{1}{2^{k+1}}$
+			- $= 2 + \frac{-1 \cdot 2}{2^k \cdot 2} + \frac{1}{2^k \cdot 2}$
+			- $= 2 + \frac{-2+1}{2^k \cdot 2}$
+			- $= 2 + \frac{-1}{2^k \cdot 2}$
+			- $= 2 + \frac{-1}{2^k+1}$
+			- $= 2 - \frac{1}{2^k+1}$
