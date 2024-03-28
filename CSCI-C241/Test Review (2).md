@@ -1,10 +1,10 @@
 1. Question One
 	1. $6, 8, 10$
-	2. This is not possible, as $A \subseteq \mathbb{Z}$, so $A \setminus \mathbb{Z} = \varnothing$
+	2. $\{\frac{1}{3}, \frac{2}{3}\}$
 	3. $\{-10\}, \{-12\}, \{-66\}$
 	4. $\{(s) \mid \text{the first character of } s\}$
 	5. $f(n) = |n|$
-2. Question Two
+2. Question Two (Wrong)
 	1. Claim: if $D \cap B \subseteq A \setminus C$, then $D \cap E \subseteq E \setminus (B \cap C)$
 	2. Pf: Choose the set $A,B,C,D,E$
 		3. Choose $x \in D \cap E$
@@ -54,3 +54,51 @@
 		6. Since $x^2 = x \cdot x$ and $x^2 \geq 0$, we know $x^2 \geq x$
 		8. Since $x^2 \geq x$ and $x^2 \geq 0$, we know $x^2 + 1 > x$
 		9. Since $x_2 + 1 > x$, we know $x^2 + 1 \neq x$, so $\neg Q(x, x)$, therefore $Q$ is antireflexive
+**In Class Review**
+- Sets
+	- Set-List Notation/Set-Builder Notation
+	- Set Operations: $\cap, \cap, \overline{}, \setminus$
+	- Subsets
+		- Powerset, $\mathcal{P}$
+	- Cardinality
+		- Countable versus Uncountable
+- Relations
+	- Definitions
+		- Prefix Notation
+	- Properties of Relations
+		- Reflexive, Anti-Reflexive, Symmetric, Anti-Symmetric, Transitive
+- Functions
+	- Definition as a relation, Uniqueness+Existence
+	- Partial/Total Functions
+	- One-to-One/Onto Functions, Bijection
+- Informal Proof
+	- Direct Proof
+	- Application
+	- Proof by Contradiction
+	- Proof by Counter Example
+	- Proof by Example
+	- When you know a thing exists, give it a name
+		- Existential Elimination
+	- Proof by Cases
+- Examples:
+	1. Claim: Generic Claim
+		- Goal: $A \subseteq \overline{B}$
+		- Pf: Choose $x \in A$
+			- Suppose towards a contradiction that $x \in B$
+				- -----Contradict this...
+	2. Claim: For all sets $H,J,K,L$, if $J \subseteq L \setminus M \text{ and } H \subseteq \overline{M}$, then $H \cup (J \cap K) \subseteq (H \cup K) \setminus M$
+		1. Pf: Choose sets $H,J,K,L$
+			1. Assume $J \subseteq L \setminus M \text{ and } H \subseteq \overline{M}$
+			2. Choose $x \in H \cup (J \cap K)$
+			3. Case 1: $x \in H$
+				1. Since $x \in H$, $x \in \overline{M}$
+				2. Since $x \in \overline{M}$, $x \notin M$
+				3. Since $x \in H$, $x \in H \cup K$
+				4. Since $x \in H \cup K$ and $x \notin M$, $x \in (H \cup K) \setminus M$
+			4. Case 2: $x \in J \cap K$
+				1. Since $x \in J \cap K$, $x \in J$ and $x \in K$
+				2. Since $x \in K$, $x \in H \cup K$
+				3. Since $x \in L \setminus M$, $x \in L$ and $x \notin M$
+				4. Since $x \in H \cup K$ and $x \notin M$, $x \in (H \cup K) \setminus M$
+			5. In either case of $x \in H \cup (J \cap K)$, we proved that $x \in (H \cup K) \setminus M$, so $H \cup (J \cap K) \subseteq (H \cup K) \setminus M$
+	3. 
