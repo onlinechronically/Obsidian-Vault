@@ -1,0 +1,92 @@
+###### **Informal Proofs**
+- Proving an Existential Claim
+	- Give an example (and show that the example works)
+- Proving a Universal Claim
+	- "Choose" a generic example and prove that it works
+		- "Choose a member" of A,
+		- "and try to prove it is a member of B"
+		- to prove $A \subseteq B$
+- Rules
+	- Universal - Introduction ("Direct Proof")
+		- To prove that every $\star$ has property $P$, we "choose" a variable to represent a generic $\star$ and then prove that this variable has property $P$
+		- To prove "every $\star$ is", start by writing: "Choose a $\star$ $x$"
+	- Universal - "Elimination" (Application)
+		- If you know that "every $\star$ has property $P$" and you know that "$x$ is a $\star$", then you can conclude $x$ has property $P$
+	- Existential - Introduction
+		- To prove "there is a $\star$ with property $P$"
+			- Give an example of a $\star$
+			- Prove that said example has property $P$
+	- Existential - Elimination
+		- If you already know "there is a $\star$ with property $P$"
+			- "So there is a $\star$ with property $P$. Call it $x$"
+			- "Let $a$ be a $\star$ with property $P$ or Hence some $\star$ $M$ exists that has property $P$"
+		- Give a name to the $\star$ with property $P$ and use that name to prove something else
+	- Modus Tollens
+		- $p \rightarrow q, \neg q \vdash \neg p$
+	- Universal - Negation
+		- To prove a universal claim is False, give a counter example
+	- Existential - Negation
+		- To prove an existential claim is False, Proof by Contradiction
+###### **Sets:**
+- Set Operations
+	- Union ($A \cup B$)
+		- $\{x \mid x \in A \lor x \in B\}$
+	- Intersection ($A \cap B$)
+		- $\{x \mid x \in A \land x \in B\}$
+	- Complement ($\overline A$)
+		- $\{x \mid x \notin A\}$
+	- Relative Complement/Set Subtraction
+		- $A \setminus B = A - B = \{ x \mid x \in A \land x \notin B \}$
+- Subsets
+	- Def: A set A is a subset of a set B if and only if every member of A is also a member of B
+	- We write $A \subseteq B$ (\\subseteq) to mean "A is a subset of B"
+	- A is a proper (or strict) subset of B if and only if A is a subset of B and $A \neq B$
+	- We write $A \subsetneq B$ (\\subsetneq) to mean "A is a proper subset of B"
+- Powersets
+	- The powerset of A is the set whose members are the subsets of A
+	- We write $\mathcal{P} (A)$ to mean "the powerset of A"
+	- Thm: For a finite set A
+		- $\mid \mathcal{P} (A) \mid = 2^{\mid A \mid}$
+- Supersets
+	- If A is a subset of B, then B is a superset of A
+		- We write $B \supseteq A$ to mean "B is a superset of A"
+###### **Relations/Properties:**
+- **Cartesian Product**
+	- $A \times B = \{(a,b) \mid a \in A \land b \in B\}$
+	-  The set of all ordered pairs where the first component is a member of $A$ and the second component is a member of $B$
+	- Fact: For any finite sets $A$ and $B$, $\mid A \times B \mid = |A| \cdot |B|$
+- **Relations**: A set of ordered pairs where the first component is a member of $A$ and the second component is a member of $B$ is called a relation from $A$ to $B$
+- The Cartesian Product $A \times B$ is the biggest possible relation from $A$ to $B$
+- Every relation from $A$ to $B$ is a subset of $A \times B$
+- Notation
+	- $(2,b) \in R$
+	- $R(2,b)$ - "prefix" notation
+	- $2Rb$ - "infix" notation
+- Properties of Relations
+	- A relation $R$ on a set $A$ is reflexive if and only if **for every** $x \in A$, $R(x, x)$
+		- (everything is related to itself)
+	- A relation $R$ on a set $A$ is antireflexive if and only if **for every** $x \in A$, $\neg R(x,x)$
+		- (nothing is related to itself)
+	- A relation $R$ on a set $A$ is symmetric if and only if **for all** $x,y \in A$, if $R(x,y)$, then $R(y,x)$
+	- A relation $R$ on a set $A$ is antisymmetric if and only if **for all** $x,y \in A$, if $R(x,y)$ and $R(y,x)$, then $x = y$
+		- if $R(x,y)$ and $x \neq y$, then $\neg R(y,x)$
+	- A relation $R$ on a set $A$ is transitive if and only if **for all** $x,y,z \in A$, if $R(x,y)$ and $R(y,z)$, then $R(x,z)$
+###### **Functions:**
+- **Uniqueness**: A relation $R$ from a set $A$ to a set $B$ is a function if and only if **for every** $x \in A$ and $y,z \in B$, if $R(x,y)$ and $R(x,z)$, then $y = z$
+	- An input maps to an input, or doesn't (nothing more than one)
+	- An input will not map to more than one output
+- **Existence**: **For every** $x \in A$, there exists an $y \in B$ with $R(x,y)$
+	- Every input is mapped to at least one output
+- Not a function, if not Uniqueness
+- Partial Function, if Uniqueness and not Existence
+- Total Function, if both, "total function" = "function"
+- A function $f \colon A \rightarrow B$ is **one-to-one** (an injection) if and only if for every $x,y \in A$, if $f(x) = f(y)$, then $x=y$
+	- Two different inputs cannot map to the same output
+- A function $f \colon A \rightarrow B$ is **onto** (a surjection) if and only if for every $y \in B$ there is an $x \in A$ with $f(x) = y$
+	- Every member of the codomain must be mapped to by at least one member of the domain
+- A function that is a **bijection** is both **one-to-one** and **onto**
+- Function Notation: $f(x) = |x|$
+###### **Cardinality (Functions):**
+- Bijection ($A \rightarrow B$): $|A| = |B|$
+- One-to-One ($A \rightarrow B$): $|A| \leq |B|$
+- Onto ($A \rightarrow B$): $|A| \geq |B|$
