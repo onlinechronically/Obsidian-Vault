@@ -1,0 +1,10 @@
+- Example #1 (01/04/2024):
+	- Claim: For any positive integer before $a$ and and conefficients $b_0,b_1,...,b_{a-1} \in \mathbb{R}$ there exists and $N \in \mathbb{R}$ such that for all $x > N$, $x^a > b_0+b_1x + b_2x^2 + ... + b_{a-1}x^{a-1}$
+	- $\sum\limits^{a-1}_{i=0}{b_ix^i}$
+	- Pf:
+		- Choose a positive integer $a$ and $b_0,b_1,...,b_{a-1} \in \mathbb{R}$
+		- Define $N = \text{max}(1, \sum\limits^{a-1}_{i=0}{b_i})$
+		- Choose $x > N$
+		- So $x > 1$ and $x > \text{the sum of all the coefficients}$
+		- $x^a = x \cdot x^{a-1} \geq (\sum\limits^{a-1}_{i=0}{b_i}) \cdot x^{a-1}$
+		- 

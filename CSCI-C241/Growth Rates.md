@@ -1,0 +1,5 @@
+- Fact: Any exponential function is eventually larger than any polynomial function
+	- More specific & precise
+		- For every $b>1$ and $a >0$, There exists a number $N$ such that for every $x > N$, $b^x > x^a$
+	- exponential > polynomial (with degree 1) > linear > square/cube roots > logarithmic > constant
+- 

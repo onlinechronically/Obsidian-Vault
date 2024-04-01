@@ -1,0 +1,23 @@
+- Example #1 (01/04/2024):
+	- Given a set $A$ of size $n$ ($|A| = n$), how many permutations of length $n$ from $A$ are there? $n!$
+	- $\{1,2,3\} - 3!$
+		- $(1,2,3)$
+		- $(1,3,2)$
+		- $(2,3,1)$
+		- $(2,1,3)$
+		- $(3,1,2)$
+		- $(3,2,1)$
+	- Pf:
+		- Goal: Every set of size $k+1$ has $(k+1)!$ permutation
+		- (Base ($n=0$))
+			- There is one permutation (the empty sequence) of the empty set (the only set of size $0$) and $0! = 1$
+		- (Inductive Step)
+			- Assume for some $k \in \mathbb{N}$, that every every set of size $k$ has $k!$ permutations
+			- Choose a set $A$ of size $k+1$
+			- Remove one of the elements of $A$, call it $A$ to get a set $A' = A \setminus \{a\}$ with $k$ elements
+			- $A'$ has $k!$ permutations (by IH)
+			- For each of these $k!$ permutations, there are $k+1$ permutations of $A$ (because there are $k+1$ positions to put $a$ in between the parts of the permutations of $A'$)
+			- So this makes $(k+1) \cdot k! = (k+1)!$ total permutations of $A$
+- Example #2 (01/04/2024):
+	- $_3P_5$
+	- 

@@ -1,0 +1,19 @@
+- Mathematics of Counting "things"
+- Examples (Simple):
+	- For any finite set $A$ there are $2^{|A|}$ subsets of $A$
+	- For any alphabet $\sum$ of size $a$, there are $a^n$ string of length $n$ using the alphabet $\sum$
+- Permutation
+	- For any finite set $A$, there are $|A|!$ permutations of length $n$ from $A$
+	- A permutation of a set $A$ is a sequence of the all the values from $A$, each occurring exactly once
+	- Ex: $A=\{0,1,2,3,4,5,6\}$
+		- Permutations of $A$:
+			- $(1,6,5,2,0,4,3)$
+			- $(6,5,4,3,2,1,0)$
+	- The number of permutations of length $r$ taken from a set of size $n$
+		- $P(n,r)$
+		- $nPr$
+		- $nPr = \frac{n!}{(n-r)!}$
+- Combinations
+	- How many subsets of $r$ can you take from a set of size $n$
+	- $\frac{_nP_r}{r!} = \frac{\frac{n!}{(n-r)!}}{r!}$
+	- 
