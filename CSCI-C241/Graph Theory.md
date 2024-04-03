@@ -1,0 +1,39 @@
+- A collection of vertices/nodes and edges/links
+- A graph is a pair $(V, E)$ of sets, where $V$ is the set of vertices and $E$ is a set whose members are 2-item sets of vertices (the edges)
+- $G_1 = (\{1,2,3,4,5,6,7\}, \{\{1,4\}, \{1,5\}, \{2,5\}, \{2,6\}, \{5,6\}, \{3,6\}, \{6,7\}\})$
+- Graphs are by default undirected
+- For a directed graph, $E$ would be a set of ordered pairs of vertices, instead of 2-item sets
+- Definitions:
+	- Two vertices are **neighbours** or **adjacent** if there is an edge between them (in an undirected graph)
+	- If there is an edge in a directed graph $V \rightarrow W$, $W$ is the **child** of $V$ and $V$ is the **parent** of $W$
+	- The degree of a vertex is the number of neighbours
+	- The **in-degree** of a vertex is the number of parents and the **out-degree** is the number of children
+	- A **path** from a vertex $V$ to a vertex $W$ is a sequence of edges $V \rightarrow V_1 \rightarrow V_2 \rightarrow ... \rightarrow W$ starting at $V$ and ending at $W$ with no repeated edges of vertices
+	- A **trail** is a path that allows repeated vertices
+	- If there is a path from $V \rightarrow W$, we say $V$ and $W$ are **connected**
+	- A **walk** is a path that can have repeated edges and/or vertices
+	- If any two vertices in a graph are connected, we say the graph is connected
+	- A **cycle** is a trail (not a walk) from a vertex to itself where only the first and last vertices are the same and there is at least one edge
+- Neighbours of $6$ are ${2,3,5,7}$
+- The children of $1$ are ${2,4}$
+- The children of $2$ are ${1,2,4}$
+- Paths from $1$ to $7$
+	- $\{1, 5\}, \{5, 2\}, \{2, 6\}, \{6, 7\}$
+	- $1 \rightarrow 5 \rightarrow 6 \rightarrow 7$
+- Trees
+	- A **tree** is a graph that is connected and has no cycles.
+	- Lemma: The sum of the degrees of all the vertices of a graph is twice the number of edges
+	- Theorem: A graph with $n$ vertices and $n-1$ edges must be a tree
+		- Pf: Induction on $n$
+			- Goal: any graph with $k+1$ vertices and ($k+1-1$) edges is a tree
+			- Base ($n=1$):
+				- A graph with $1$ vertex and $1-1=0$ edges is a tree (trivially), it's just a single vertex with no edges, because it is trivially connected and it has no cycles
+			- Indction:
+				- Assume for some $k \in \mathbb{N}$ any graph with $k$ vertices and $k-1$ edges is a tree
+				- Consider a graph $g$ with $k+1$ vertices and $(k+1-1)=k$ edges
+				- There is at least one vertex with degree of $1$ (only one neighbour)
+				- Remove $v$ to get a new graph $G'$ that has one fewer vertex, so it has $k$ vertices and $k-1$ edges
+				- Because $v$ only had one neighbour, removing it doesn't rui  connectedness
+				- So by IH, $G'$ is a tree
+				- So $G'$ has no cycles
+				- There are no cycles in $G'$ and adding 
