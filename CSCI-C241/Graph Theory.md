@@ -12,7 +12,7 @@
 	- A **trail** is a path that allows repeated vertices
 	- If there is a path from $V \rightarrow W$, we say $V$ and $W$ are **connected**
 	- A **walk** is a path that can have repeated edges and/or vertices
-	- If any two vertices in a graph are connected, we say the graph is connected
+	- If any two vertices in a graph are connected, we say the graph is **connected**
 	- A **cycle** is a trail (not a walk) from a vertex to itself where only the first and last vertices are the same and there is at least one edge
 - Neighbours of $6$ are ${2,3,5,7}$
 - The children of $1$ are ${2,4}$
