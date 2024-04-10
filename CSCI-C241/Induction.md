@@ -20,4 +20,3 @@
 		- Prove that if the claim is true for some natural number, then it must also be true for the next natural number (**Induction Case/Step**)
 			- Prove $P(k) \rightarrow P(k+1)$
 		- Assume $P(k)$ is true for $k \in \mathbb{N}$ and try to prove $P(k+1)$ is true
-		- 
