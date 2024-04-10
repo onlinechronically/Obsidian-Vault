@@ -2,7 +2,7 @@
 - Examples (Simple):
 	- For any finite set $A$ there are $2^{|A|}$ subsets of $A$
 	- For any alphabet $\sum$ of size $a$, there are $a^n$ string of length $n$ using the alphabet $\sum$
-- Permutation
+- Permutation - Order Matters
 	- For any finite set $A$, there are $|A|!$ permutations of length $n$ from $A$
 	- A permutation of a set $A$ is a sequence of the all the values from $A$, each occurring exactly once
 	- Ex: $A=\{0,1,2,3,4,5,6\}$
@@ -13,7 +13,7 @@
 		- $P(n,r)$
 		- $nPr$
 		- $nPr = \frac{n!}{(n-r)!}$
-- Combinations
+- Combinations - Order doesn't matter like it does in permutations
 	- How many subsets of $r$ can you take from a set of size $n$
-	- $\frac{_nP_r}{r!} = \frac{\frac{n!}{(n-r)!}}{r!}$
+	- $\frac{_nP_r}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{(n-r)! \cdot r!}$
 	- 
