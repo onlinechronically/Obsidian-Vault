@@ -16,4 +16,3 @@
 - Combinations - Order doesn't matter like it does in permutations
 	- How many subsets of $r$ can you take from a set of size $n$
 	- $\frac{_nP_r}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{(n-r)! \cdot r!}$
-	- 
