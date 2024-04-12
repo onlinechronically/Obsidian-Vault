@@ -37,3 +37,14 @@
 				- So by IH, $G'$ is a tree
 				- So $G'$ has no cycles
 				- There are no cycles in $G'$ and adding 
+	- In a **Binary Tree**, every node has at most 2 children
+	- In a **Full Binary Tree**, every node except the leaves has exactly 2 children
+	- A **Complete Binary Tree** has: in every level except the last 2, nodes have exactly 2 children, and on the second to last level, all non-leaves are all the way to the right
+	- The **depth** of a node is the length of the path (in # of edges) from the root to that node
+	- The **depth** of an entire tree is the maximum depth of any node in the tree
+- Full Binary Tree (FBT)
+	- Recursive Definition
+		- A full binary tree (FBT) is one of 
+			- $\verb|[]|$: the tree consisting of a single node and no edges
+			- $\verb|[|T_1, T_2\verb|]|$: one new root node with two new edges from the new root to the old root of $T_1$ and $T_2$
+			- 
