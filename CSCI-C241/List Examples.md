@@ -1,0 +1,23 @@
+- Example #1 (15/04/2024):
+	- List of integers
+	- $\verb|[]|$
+	- $\verb|[|42, *\verb|[]]| = \verb|[|42\verb|]|$
+	- \verb|[|21, *\verb|[]]| = \verb|[|21\verb|]|
+	- $\verb|[|21, *\verb|[|42\verb|]]| = \verb|[|21,42\verb|]|$
+	- $\verb|[|42, *\verb|[|21,42\verb|]]| = \verb|[|42,21,42\verb|]|$
+	- $\verb|[|1,*\verb|[|2,*\verb|[|3,*\verb|[|4,*\verb|[|5,*\verb|[]]]]]]|$
+- Example #2 (15/04/2024): Given a recursive definition of the function $\verb|sum|$, that adds up all the numbers in a list
+	- $\verb|sum|(L) = \begin{cases} 0 \text{ if } L = \verb|[]| \\ first + \verb|sum|(rest) \text{ otherwise} \end{cases}$
+- Example #3 (15/04/2024):
+	- Claim: For any lists $L_1, L_2$, $\verb|len|(\verb|concat|(L_1, L_2)) = \verb|len|(L_1) + \verb|len|(L_2)$
+	- Pf: Induction on $L_1$
+		- Base ($L_1 = \verb|[]|$):
+			- $\verb|len|(\verb|concat|(\verb|[]|, L_2)) = \verb|len|(L_2)$
+			- $\verb|len|(\verb|[]|) + \verb|len|(L_2) = 0 + \verb|len|(L_2)$
+		- Inductive ($L_1 = \verb|[|first, *rest\verb|]|$):
+			- Assume for some list $rest$ that $\verb|len|(\verb|concat|(rest, L_2)) = \verb|len|(rest) + \verb|len|(L_2)$
+			- $\verb|len|(\verb|concat|(\verb|[|first, *rest\verb|]|, L_2)) = \verb|len|(\verb|[|first, *\verb|concat|(rest, L_2)\verb|]|$
+			- $= 1 + \verb|len|(\verb|concat|(rest, L_2))$
+			- $= 1 + \verb|len|(rest) + \verb|len|(L_2)$ (By the Inductive Hypothesis)
+			- $= \verb|len|(\verb|[|first, *rest\verb|]|) + \verb|len|(L_2)$
+- 

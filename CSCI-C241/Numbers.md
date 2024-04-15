@@ -11,4 +11,12 @@
 	- $\mathbb{R} =$ every # with a decimal expansion
 	- $\mathbb{R} =$ (finite, infinite, pattern, no pattern)
 - Complex Numbers ($\mathbb{C}$)
-- 
+- Fibonacci - Hemachandra Numbers
+	- $1,1,2,3,5,8,13,21$
+	- $f_0 = 0$
+	- $f_1 = 1$
+	- $f_n = f_{n-1} + f{n-2}$
+- Golden Ratio:
+	- $\varphi = \frac{1+\sqrt{5}}{2}$
+	- $\psi = \frac{1-\sqrt{5}}{2}$
+	- $x^2 - x - 1 = 0$
