@@ -2,7 +2,7 @@
 	- List of integers
 	- $\verb|[]|$
 	- $\verb|[|42, *\verb|[]]| = \verb|[|42\verb|]|$
-	- \verb|[|21, *\verb|[]]| = \verb|[|21\verb|]|
+	- $\verb|[|21, *\verb|[]]| = \verb|[|21\verb|]|$
 	- $\verb|[|21, *\verb|[|42\verb|]]| = \verb|[|21,42\verb|]|$
 	- $\verb|[|42, *\verb|[|21,42\verb|]]| = \verb|[|42,21,42\verb|]|$
 	- $\verb|[|1,*\verb|[|2,*\verb|[|3,*\verb|[|4,*\verb|[|5,*\verb|[]]]]]]|$
@@ -20,4 +20,3 @@
 			- $= 1 + \verb|len|(\verb|concat|(rest, L_2))$
 			- $= 1 + \verb|len|(rest) + \verb|len|(L_2)$ (By the Inductive Hypothesis)
 			- $= \verb|len|(\verb|[|first, *rest\verb|]|) + \verb|len|(L_2)$
-- 

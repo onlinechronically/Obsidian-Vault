@@ -6,7 +6,7 @@
 - Definitions:
 	- Two vertices are **neighbours** or **adjacent** if there is an edge between them (in an undirected graph)
 	- If there is an edge in a directed graph $V \rightarrow W$, $W$ is the **child** of $V$ and $V$ is the **parent** of $W$
-	- The degree of a vertex is the number of neighbours
+	- The **degree** of a vertex is the number of neighbours
 	- The **in-degree** of a vertex is the number of parents and the **out-degree** is the number of children
 	- A **path** from a vertex $V$ to a vertex $W$ is a sequence of edges $V \rightarrow V_1 \rightarrow V_2 \rightarrow ... \rightarrow W$ starting at $V$ and ending at $W$ with no repeated edges of vertices
 	- A **trail** is a path that allows repeated vertices
