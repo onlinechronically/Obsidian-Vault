@@ -110,3 +110,32 @@
 			- $= 2 + \frac{-1}{2^k \cdot 2}$
 			- $= 2 + \frac{-1}{2^k+1}$
 			- $= 2 - \frac{1}{2^k+1}$
+- Example #1 (17/04/2024):
+	- Claim: $F_n = \frac{\varphi^n - \psi^n}{\varphi - \psi}$
+	- Pf:
+		- (Base, $n = 0$):
+			- $\frac{\varphi^0 - \psi^0}{\varphi - \psi} = \frac{1-1}{\varphi - \psi} = 0$
+			- $F_0 = 0$
+		- (Base, $n=1$):
+			- $\frac{\varphi^1 - \psi^1}{\varphi - \psi} = \frac{\varphi - \psi}{\varphi - \psi} = 1$
+		- (Inductive Case):
+			- Assume for some $k \in \mathbb{N}$, with $F_i = \frac{\varphi^i - \psi^i}{\varphi - \psi}$ for all $i \leq k$
+			- $F_{k+1} = F_k + F_{k-1}$
+			- $= \frac{\varphi^{k} - \psi{k}}{\varphi - \psi} + \frac{\varphi^{k-1} - \psi^{k-1}}{\varphi - \psi}$ (By IH $k \leq k$ and $k-1 \leq k$)
+			- $= \frac{\varphi^k + \varphi^{k-1} - (\psi^k + \psi^{k-1})}{\varphi - \psi}$
+			- $= \frac{\varphi^{k-1}(\varphi +1) - \psi^{k-1}(\psi + 1)}{\varphi - \psi}$
+			- $= \frac{\varphi^{k-1}(\varphi^2) - \psi^{k-1}(\psi^2)}{\varphi - \psi}$ (As per Lemma)
+			- $= \frac{\varphi^{k+1} - \psi^{k+1}}{\varphi - \psi}$
+- Example #2 (17/04/2024)
+	-  Claim: For any integer $n>1$, $n$ can be written as a product of prime numbers
+	- Pf:
+		- (Base, $n = 2$):
+			- When $n=2$, we can write $2 = 2$ (a product of prime number, $n$ is)
+		- (Inductive Step)
+			- Assume for some integer $k > 1$, $i$ can be written as a product of prime numbers for all $i \leq k$ and $i > 1$
+			- If $k+1$ is prime then, it can be written as a product of just one prime, $k+1$
+			- If $k+1$ is not prime, then it can be written as $k+1 = ab$, where $a$ and $b$ are natural numbers, $2 \leq a,b \leq k$ and
+				- $a,b \leq k$, so the IH says we can write both as a product of primes
+				- So we can write $k+1$ as the product of these two product of primes
+				- $a=p_1 \cdot p_2 \cdot p_3 \cdot \dots p_s$
+				- $b=q_1 \cdot q_2 \cdot q_3 \cdot \dots q_s$
