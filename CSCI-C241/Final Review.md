@@ -1,0 +1,117 @@
+- Topics
+	- Propositional Logic
+		- Translations
+		- Truth Assignments/Tables
+		- Tautology, Contradiction, Satisfiable, Contingency
+		- Consistent sets of formulas
+		- Valid/Invalid Arguments
+		- Logical Equivalence
+	- First Order Logic
+		- Evaluating when a formula is true
+	- Set Theory
+		- Set builder notation
+		- Set list notation
+		- Operations
+			- $\cup, \cap, \overline{}, \setminus$
+		- Cardinality
+		- Countable vs Uncountable
+		- Subsets
+		- Relations
+			- Properties
+				- Reflexivity
+				- Ant-Reflexivity
+				- Symmetry
+				- Anti-Symmetry
+				- Transitivity
+			- Functions
+				- Partial Functions
+				- One-to-One & Onto
+	- Combinatorics
+		- Permutations
+		- Combinations
+		- String counting
+	- Growth Rates
+		- Basic Definition
+		- Polynomial vs Logarithmic vs Exponential ...
+	- Graph Theory
+		- Connected
+		- Paths & Cycles
+		- Trees
+		- Degree
+	- Recursion & Induction
+		- Numerical Induction
+			- Strong Induction
+		- Structural Induction/Recursion
+			- Full Binary Trees
+			- Linked Lists (Cons)
+		- Recursively Defined Functions
+	- Proof Strategies
+		- Direct Proof
+		- Proof by Example/Construction
+		- Proof by Contradiction
+			- Proof by Counter Example
+		- Proof by Cases
+		- Giving names to things
+		- Application
+	- Numbers
+		- Summation Notation
+		- Factorials
+		- Exponents
+		- Polynomials
+		- Fractions
+		- Logarithms
+		- Inequalities
+
+- 2) A = F, B = True, C = False
+- 5) $R = \{(x,y) \mid x-y > 1\}$
+	1. No, $5 \in \mathbb{R}$, but $\neg R(5,5)$, because $5-5 = 0$ and $0 < 1$
+	2. Yes, because any number subtracted from itself is $0$, and $0 < 1$
+	3. No, $5,3 \in \mathbb{R}$ and $R(5,3)$, but not $\neg R(3,5)$ because $5-3 = 2$ and $2 > 1$ and $3 - 5 = -2$ and $-2 < 1$
+	4. Yes, trivially the premise is never satisfied
+	5. Pf: Claim: $R$ is transitive
+		6. Choose $x,y,z \in \mathbb{R}$ and assume $R(x,y)$ and $R(y,z)$
+		7. Since $x-y > 1$, then $y > z$
+		8. Since $y - z > 1$, then 
+- 12)
+	- Goal: There is a pair of points with the distance $\lfloor \frac{c}{2} \rfloor$
+	- Pf:
+		- Choose a graph $G$ where the shortest cycle has the length $c$
+		- Let $(v_0, v_1, v_2, ..., v_c)$ be one of those shortest cycles of length $c$ with $v_0 = v_c$
+		- Consider the vertices $v_0$ and $v_{\lfloor\frac{c}{2}\rfloor}$
+		- There is a path of length $\lfloor \frac{c}{2} \rfloor$ from from $v_0$ to $v_{\lfloor\frac{c}{2}\rfloor}$, $(v_0, v_1, v_2, ..., v_{\lfloor \frac{c}{2} \rfloor})$
+		- If there were a shorter path $(w_0, w_1, w_2, ..., w_c)$, $w_0 = v_0$ and $w_n = v_{\lfloor\frac{c}{2}\rfloor}$
+		- then there would be a cycle of length $< c\colon$
+- 13)
+	- Claim: For any FBT $T$, $nd(T) \geq 2 \cdot dp(T) + 1$
+	- Pf:
+		- (Base, $T = \verb|[]|$)
+			- $\verb|nd|(T) = 1$
+			- $\verb|dp|(T) = 0$
+			- $2 \cdot 0 + 1 = 1$
+			- $1 = 1$
+		- (Induction, $T = \verb|[| T_1, T_2 \verb|]|$)
+			- Assume for some FBT's $T_1, T_2$, $\verb|nd|(T_1) \geq 2 \cdot \verb|dp|(T_1) + 1$ and $\verb|nd|(T_2) \geq 2 \cdot \verb|dp|(T_2) + 1$
+			- $\verb|nd|(T) = \verb|nd|(T_1) + \verb|nd|(T_2) + 1$
+			- $\geq (2 \cdot \verb|dp|(T_1) + 1) + (2 \cdot \verb|dp|(T_2) + 1) + 1$ (by IH)
+			- $= 2\verb|dp|(T_1) + 2\verb|dp|(T_2) + 2 + 1$
+			- $= 2(\verb|dp|(T_1) + \verb|dp|(T_2)) + 2 + 1$
+			- $= 2(\verb|dp|(T_1) + \verb|dp|(T_2) + 1) + 2$
+			- $> 2(\verb|max|(\verb|dp|(T_1), \verb|dp|(T_2))) + 2 + 1$
+			- $\dots$
+			- $= (2 \cdot \verb|dp|(T_1) + 1) + (2 \cdot \verb|dp|(T_2) + 1) + 1$
+			- $= 2 \cdot \verb|dp|(T_1) + 2 \cdot \verb|dp|(T_2) + 3$
+			- $= \verb|max|(\verb|dp|(T_1), \verb|dp|(T_2)) + 1$
+- 15)
+	- Claim: Every integer $n \geq 1$ can be written in the form $n = 2^ab$ for some $a \in \mathbb{N}$ and some odd number $b \geq 1$
+	- Pf:
+		- (Base, $n = 1$)
+			- $1 = 2^0 \cdot 1$
+		- (Ind.)
+			- Assume for all integer $i \leq k$, $i$ can be written in the form in the form $i = 2^ab$ for some $a \in \mathbb{N}$ and some odd number $b \geq 1$
+			- Case 1: $k+1$ is odd
+				- $k+1 = 2^0 \cdot (k+1)$ (any number multiplied by itself, will equate to itself)
+			- Case 2: $k+1$ is even
+				- $k = 2^0 \cdot k$
+				- $k + 1 = (2^0 \cdot k) + 1$
+				- $\frac{k+1}{2} \leq k$, so we know we can apply to IH to get $\frac{k+1}{2} = 2^a \cdot b$
+				- $2 \cdot \frac{k+1}{2} = 2(2^ab) = 2^{a+1} \cdot b$
