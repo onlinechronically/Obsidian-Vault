@@ -1,0 +1,35 @@
+- $\verb|git init|$
+	- This command initialises a new empty git repository in the current working directory
+- $\verb|git stage x|$ & $\verb|git add x|$
+	- This command marks a given file $\verb|x|$ as staged (or to be committed)
+- $\verb|git reset x|$
+	- This command unstages a file $\verb|x|$ that has been previously staged (and not committed)
+- $\verb|git commit -m "message goes here"|$
+	- This command takes all the staged files and creates a commit locally where those saves are recorded
+- $\verb|git push|$
+	- This command "publishes" any outstanding commits in the repository to the current remote set in the repository
+- $\verb|git pull|$
+	- This command, "downloads" the changes made on the remote repository to the local working directory
+- $\verb|git checkout commitHash|$
+	- This command converts the files in the local repository directory to those of the $\verb|commitHash|$
+	- $\verb|commitHash|$ will either be a branch name or the hash of a commit (viewable via $\verb|git log|$)
+- $\verb|git checkout -b branchName|$
+	- This command creates a branch of $\verb|branchName|$ (if it does not already exist), where the new branch is identical to the current one, but changes are not synchronised
+- $\verb|git branch|$
+	- This command lists all of the branches in said repository
+- $\verb|git stash -u|$
+	- The stash command serves as a way to save your code off to the side for a later point in time
+	- The $\verb|-u|$ saves not only files tracked, but also those that are untracked
+	- After stashing, the local directory has the untracked files removed
+- $\verb|git stash list|$
+	- This command lists all current stashes, on the local machine
+- $\verb|git stash pop|$
+	- This command "brings back" all of the data that was stashed away, and removes it from the stash list
+- $\verb|git stash apply stashIndex|$
+	- This command works just like $\verb|pop|$ but does not remove it from the stash list
+- $\verb|git merge branchName|$
+	- This command merges some branch $\verb|branchName|$ with the current branch
+- $\verb|git remote add origin gitUrl|$
+	- This command "connects" your local repository to a remote repository
+- $\verb|git push -u origin master|$
+	- This command pushes the branch $\verb|master|$ to the set remote, and sets this remote as upstream so pull/push can be used without extra arguments
