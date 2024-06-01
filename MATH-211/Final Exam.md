@@ -4,6 +4,5 @@ aliases:
   - Final Exam
 tags: []
 ---
-
 # Final Exam
 

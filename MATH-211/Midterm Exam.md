@@ -4,6 +4,5 @@ aliases:
   - Midterm Exam
 tags: []
 ---
-
 # Midterm Exam
 

@@ -4,6 +4,5 @@ aliases:
   - Derivative Applications
 tags: []
 ---
-
 # Derivative Applications
 

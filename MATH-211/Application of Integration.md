@@ -4,6 +4,5 @@ aliases:
   - Application of Integration
 tags: []
 ---
-
 # Application of Integration
 
