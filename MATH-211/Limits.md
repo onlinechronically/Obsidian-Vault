@@ -22,7 +22,13 @@ $$\frac{s(t_1)-s(t_0)}{t_1-t_0}$$
     - If the limits from sides are not equal, then a the double sided limit, "does not exist"
 - Limits can be simplified/solved in an easier way (as compared to numerically/graphically) using [[Limit Laws]]
 - Limit Example Types:
-    - Instantaneous velocity
     - Tangent lines
     - Velocity
+- Velocity
+    - Average Veolcity
+        - The average velocity over some interval $[t_0, t_1]$ is defined as
+          $$v_{av} = \frac{s(t_1) - s(t_0)}{t_1 - t_0}$$
+    - Instantaneous Veolcity
+        - The average velocity over some interval $[t_0, t_1]$ is defined as
+          $$v_{inst} = \lim_{t \to a}{v_{av}} = = \frac{s(t) - s(a)}{t - a}$$
 - See [[Limit Examples]]

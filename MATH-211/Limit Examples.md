@@ -135,3 +135,41 @@ $$\lim_{x \to 3}{f(x) = 4}$$
             &=& 2 \cdot 1 \\
             &=& 2
         \end{eqnarray}$$
+    - Problem 7 (Section 2.1, Related Exercise 13):
+	    - Hint: use the secant line slope formula
+		    $$s(t) = -16t^2 + 128t$$
+		- $[1, 4]$
+			$$\frac{256 - 112}{4 - 1} = \frac{144}{3} = 48$$
+		- $[1, 3]$
+			$$\frac{240 - 112}{3 - 1} = \frac{128}{2} = 64$$
+		- $[1, 2]$
+			$$\frac{192 - 112}{2 - 1} = \frac{80}{1} = 84$$
+		- $[1, 1 + h]$, where $h > 0$ is a real number
+			$$\frac{112 + -16h^2 + 128h - 112}{1 + h - 1} = \frac{-16h^2 + 128h}{h} = -16h + 128 = 16(-h + 6)$$
+	- Problem 8 (Section 2.1, Related Exercise 15):
+		- Hint: we use the slope formula for the secant line, and the relationship is referring to the interval
+		$$s(t) = -16^t + 100t$$
+		- To Do: Sketch a graph of $s$ with the secant line passing through $(0.5, s(0.5))$ and $(2, s(2))$
+			$$\begin{eqnarray}
+			\frac{s(t_1) - s(t_0)}{t_1 - t_0} &=& \frac{s(2) - s(0.5)}{2 - 0.5} \\
+			&=& \frac{136 - 46}{1.5} \\
+			&=& \frac{90}{1.5} \\
+			&=& 60
+			\end{eqnarray}$$
+			The slope of this secant line, through the lens of average velocity could be viewed as the average velocity over the interval $[0.5, 2]$
+	- Problem 9 (Section 2.1, Related Exercise 17):
+		- $$s(t) = -16t^2 + 128t$$
+
+		  |$[1,2]$|$[1,1.5]$|$[1,1.1]$|$[1,1.01]$|$[1,1.001]$|
+		  |-------|---------|---------|----------|-----------|
+		  |$80$   |$88$     |$94.4$   |$95.84$   |$95.984$   |
+
+         $$v_{inst} = \lim_{t \to 1}{s(t)} = 96$$
+	- Problem 10 (Section 2.1, Related Exercise 19):
+		- $$s(t) = -16t^2 + 100t$$
+
+		  |$[2,3]$|$[2.9,3]$|$[2.99,3]$|$[2.999,3]$|$[2.9999,3]$|
+		  |-------|---------|----------|-----------|------------|
+		  |$20$   |$5.6$    |$4.16$    |$4.016$    |$4.002$    |
+
+         $$v_{inst} = \lim_{t \to 3}{s(t)} = 4$$
