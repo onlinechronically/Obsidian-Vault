@@ -4,7 +4,6 @@ aliases:
   - Limits
 tags: []
 ---
-# Limits
 - Limit Definition(s):
     - Simple: The value that the outputs of a function approach as inputs approach a certain value
     - Preliminary: Suppose a function $f$ is defined for all $x$ near $a$ except possibly at $a$. If $f(x)$ is arbitrarily close to $L$ all $x$ sufficiently close (but not equal) to $a$, we write the following.

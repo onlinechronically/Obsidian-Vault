@@ -4,7 +4,6 @@ aliases:
   - Limit Laws
 tags: []
 ---
-# Limit Laws
 $$\text{Assume }\lim_{x \to a}{f(x)}\text{ and }\lim_{x \to a}{g(x)}\text{ exist.}$$
 The following properties hold where $c$ is a real number, and $n > 0$ is an integer.
 - **Sum Rule**
