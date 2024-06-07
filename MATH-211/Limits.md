@@ -30,4 +30,8 @@ $$\frac{s(t_1)-s(t_0)}{t_1-t_0}$$
     - Instantaneous Veolcity
         - The average velocity over some interval $[t_0, t_1]$ is defined as
           $$v_{inst} = \lim_{t \to a}{v_{av}} = = \frac{s(t) - s(a)}{t - a}$$
+- Solving Techniques
+	- Factoring and canceling out
+	- Using conjugates
+		- When direct substitution is not possible, you may rationalize numerator
 - See [[Limit Examples]]
